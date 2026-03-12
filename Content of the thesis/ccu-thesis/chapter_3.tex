@@ -1,0 +1,178 @@
+\chapter{檔位分析系統與雲端建置}
+本章節首先對本篇論文所使用的檔位預測方法進行介紹與說明，檔位預測的方法我們使用了包含Random Forests、Deep Forest、XGBoost、LightGBM、CATBoost，與神經網路的方式進行決策。檔位預測我們使用針對每個時間點的檔位進行分析，使用這種方式而不是只考慮升降檔，主要是因為這樣產生的結果可以比較方便進行檢視。最後對我們所建立的雲端資料庫系統還有網站的功能進行說明與介紹。
+
+
+
+\section{資料分析與檔位預測}
+檔位預測的方式我們選擇了包含Random Forests、Deep Forest、XGBoost、LightGBM、CATBoost，還有神經網路這幾種方法。選擇Deep Forest主要的原因是因為Random Forests的方法在分類任務中依舊有一定程度的有效性，Deep Forest是基於Random Forests受到神經網路啟發的一種方式，神經網路的方法近年來被廣泛的應用在各個領域中，但是在表格形式的 資料集中的表現並不突出，這個結合了Random Forests與神經網路的Deep Forest方法，是否可以有效地應用在我們的數據。而選擇XGBoost、LightGBM、CATBoost方法是因為在表格類型資料的分類任務中boosting tree一直是很廣為人知的有效方法，因此選擇了這些方法。而選擇神經網路的方法，則是因為前面有提到的在近年來神經網路一直是一個很受歡迎的研究方向，雖然在表格數據中一直沒有很突出表現，但是我們還是想了解神經網路在我們的資料中可以有怎樣的表現。
+
+輸入的特徵資訊包含了腳踏壓力、心律、IMU、環境溫度、GPS、移動速度，以上為一些基礎的訊息，另外加入地圖資訊，與前一個時間點的檔位，使用這兩種資訊結合基礎的感測器資訊一起用於檔位的預測。加入前次檔位訊息是因為只使用即時的資訊對檔位進行決策會有著資料處於兩個檔位的中間值，導致該時間段內檔位會頻繁的變動，這種變換檔位的方式並不符合大眾的騎乘習慣。因此我們將前次的檔位加入判斷，使其學習到如何根據前次檔位與感測器資料進行檔位的切換，同時學到檔位變換並不會短時間內頻繁的發生。
+
+
+\subsection{Deep Forest}
+Deep Forest是一個深層的隨機森林架構，主要是在Random forest基礎上加入了Cascade Forest Structure和Multi-Grained Scanning這兩個架構。Cascade Forest Structure的部分如圖\ref{DF1}\footnote{圖片出自 Deep Forest\cite{zhou2017deep}}所示，在每一層中使用多個Random Forests來對原始資料進行分類預測，在下一層使用上一層的分類結果作為輸入繼續進行預測，直到收斂。這部分是受到神經網路有著多層特徵形式的啟發，產生了這種多層結構。Multi-Grained Scanning部分如圖\ref{DF2}\footnote{圖片出自 Deep Forestt\cite{zhou2017deep}}，是受到神經網路使用卷積得到不一樣特徵的方式啟發，在每一層中使用多種side windows對特徵進行重建以產生不一樣特徵的方法。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Image/DF1.png}
+	\caption{Cascade Forest Structure}
+	\label{DF1}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Image/DF2.png}
+	\caption{Multi-Grained Scanning}
+	\label{DF2}
+\end{figure}
+
+使用該架構直接對我們的資料進行分析可以有一定程度的效果，但是原本的資料沒有考慮上一次的檔位狀態，預測結果準確度雖然高，但是卻有頻繁變動檔位的狀況如圖\ref{OrignalDF}所示，這種狀況明顯不是一般人會有的騎乘習慣，因此加入了前次檔位作為輸入的其中一種資訊，若直接將前次檔位加入，會對前次檔位的依賴過高，導致檔位一直都不變化，這也不是我們想要的結果，所以我們將除了前次檔位訊息的資訊量增加至前次檔位的好幾倍，以達到考慮前次檔位資訊，又不會過度依賴前次檔位的狀況。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Image/DF/orignal.png}
+	\caption{DeepForest 訓練時不考慮前次檔位的訊息}
+	\label{OrignalDF}
+\end{figure}
+
+\subsection{XGBoost、LightGBM、CATBoost}
+XGBoost是一種Gradient Boosted Tree，使用樹狀的結構對每個樣本根據其特徵資訊得出對應於該類別的分數，並且利用多棵樹的結果產生最終分數。XGBoost使用了一些方式對其進行了優化，包含了分割方法採用預先設定好的分割點取代逐點進行測試，一種對每個節點默認方向的設計有效處理特徵缺失的問題，並且透過將資料壓縮與分割的方式提高不能放入記憶體的資料存取速度。
+
+LightGBM同樣是一種Gradient Boosted Tree的方法，LightGBM使用GOSS、EFB、Leaf-wise 的生長策略對其進行優化，GOSS藉由捨棄部分梯度小的資料以此節省所需計算量，EFB透過將兩個稀疏且互斥的特徵資訊結合以減低所需的計算成本，Leaf-wise 生長策略使用了只對梯度大的節點取代了對所有節點都分裂的方式達到降低計算量之效果。使用上述這些方法LightGBM可以有效地提升整體的運行效率。
+
+CATBoost利用特徵組合、對抗梯度偏差進行優化，特徵組合將不同的特徵相結合後做為新的特徵以強化分類性能，對抗梯度偏差來源於其他的方法對於梯度估計的方式都會對模型建立與梯度估計使用相同的資料，這會導致梯度的估計產生偏差，因此他們使用一種算法在建立模型時並不會使用到梯度估計資料，以此避免該問題。
+
+與Deep Forest相同的狀況是，這些方法直接對我們的資料進行預測時準確度不低但是一樣有著高頻率的檔位變動如圖\ref{OrignalXGB}所示，但是若直接加入前次檔位的訊息會像Deep Forest那樣產生過度的依賴。因此我們選擇使用兩階段預測的方式來進行訓練，如圖\ref{XGB}所示會先使用不包含前次檔位的輸入資訊進行一次預測，出來的結果會如圖\ref{OrignalXGB}所示有著高頻率的變動，若使用該資訊作為前次檔位因為不是真正的ground turth，較不易有過度依賴的問題，將預測出來的檔位依序作為前次檔位訊息加入前一個時間點的輸入特徵中，以進行下一次的訓練，二階段的訓練中使用包含前次檔位的訊息來進行訓練，並重複第二階段一定次數後得到最終的結果。如此可以在考慮前次檔位的同時又不會對前次檔位產生過度依賴。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Image/XGB/orignal.png}
+	\caption{XGBoost 訓練時不考慮前次檔位的訊息}
+	\label{OrignalXGB}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Image/XGB.pdf}
+	\caption{兩階段訓練:第一階段訓練不考慮前次的檔位，第二階段使用第一階段預測結果作為前次檔位訊息進行訓練，並重複epoch次}
+	\label{XGB}
+\end{figure}
+
+
+\subsection{神經網路}
+神經網路預測方法主要是參考ANN，並參考ResNet與UNet部分模型架構的方法。
+
+使用ANN做為主要的基底，結合了ResNet與UNet的部分模型架構，必須有一些騎乘者實際騎乘狀態的檔位變換資料用於神經網路訓練的階段，透過訓練得到的模型可以讓騎乘者在不用特別進行換檔的動作，即時隨著環境與身體狀態的改變，變換到騎乘者所習慣的檔位。
+
+
+Artificial Neural Network顧名思義就是受人類大腦所啟發，由數個神經元互相連接用於處理訊息，ANN如圖\ref{ann}是由~input layer~將特徵輸入，經過多個隱藏層~(hidden layer)~後在~output layer~得出一個最終的分類結果。圖中連結每個神經元的線都會對應一個相對應的權重質值。訓練是該方法調整每個連接權重的方式，透過訓練資料集內已知的期望輸出結果，最小化期望結果與真實輸出的誤差值，調整出可以得到最小誤差對應每個連接的權重值。並且使用一個獨立於訓練資料集的驗證資料集，用於訓練後的驗證以確定訓練效果，調整權重參數，驗證結束後再用一個獨立於驗證資料集與訓練資料集的測試資料集來評估這個訓練結果的優劣。因為神經網路無法學習不存在訓練資料集內的特徵，訓練資料集必須包含足夠多的資料讓網路學習，並且不能包含太多不必要的細節，這會導致模型去擬合一些不重要的資訊。具體而言我們將各類感測器資訊作為輸入，使用線性層與ReLU對資料進行轉換，再使用全連接層將資料對應至每個類別中，並藉由分數的高低挑選出分類結果。
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Image/ann.png}
+	\caption{ANN}
+	\label{ann}
+\end{figure}
+
+我們參考了ResNet的residual 的部分，透過前一層特徵來增加模型的複雜度，ResNet使用了一個殘差的架構如圖\ref{resnet}\footnote{圖片出自 ResNet\cite{he2016deep}}所示，透過block形式將還沒經過該神經層處理的特徵，加入已經經過神經層的特徵，用於下一個神經層運算，利用這種方式將較為原始的資料保留到後面的神經層，藉此將每一層的輸入資料增加一些特徵，而不是單純的增加節點數量。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/resnet.png}
+	\caption{ResNet building block.}
+	\label{resnet}
+\end{figure}
+
+為了考慮更多的前次檔位還有參考較原始的資訊，參考了UNet的上採樣與下採樣部分，因為如果一直增加節點的數量，會使前次檔位訊息被漸漸的被稀釋掉，後半部分是採用上採樣的方式。在前半部分逐步增加節點數量，後半部分漸漸地減少節點的數量，並且將節點數量相同的部分連接起來，以達到參考原始的資訊的部分。
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/ANNv2.pdf}
+	\caption{NN Model: 左半部分為訓練的流程圖，我們會使用每一個epoch的預測結果作為下一次訓練的前次檔位訊息。右半部分是對我們模型的架構圖，該架構使用了ANN、Unet、ResNet的部分架構內容，包含了ResNet的殘差架構、Unet 的up sample與down sample。}
+	\label{ANN_flow}
+\end{figure}
+
+實作我們選擇使用Pytorch這個平台進行實現，透過將我們收集的8個感測器資訊讀取進架構內，經過一些隱藏層後，最終選擇出一個適合當下狀態的決策。圖\ref{ANN_flow}是神經網路的流程圖。因為預測時要考慮前一個檔位的狀態，一開始先把所有的前一個檔位都預設為3，將輸入資料加上N筆的前次檔位的訊息後進入第一層，將第一層的輸出與第一層的輸入再加上N筆的前次檔位訊息後再進入第二層，同理將第二層的輸出與第二層的輸入再加上N筆的前次檔位訊息後再進入第三層，在後半部分神經層中加入了前半部分的特徵加以利用，在第二層和第六層加入dropout避免過擬合，透過全連接層將結果塑造成6類的分類分數，最後Softmax將結果正規化到0~1的範圍內。根據預測的結果，將所有的前次檔位改為前一個時間點的預測檔位。使用CrossEntropyLoss計算本次epoch的損失，進行反向傳播，最後透過SGD進行優化，以上為完整的epoch流程。
+
+上述流程在每一層輸入都有加入前次檔位的資訊，測試的結果證實了前次檔位的資訊對於預測結果的穩定性還有準確度方面有著重大影響。參考了UNet的上採樣和下採樣部分可以讓我們的網路架構在後面的層數中也可以有一定程度的去參考前次檔位訊息，較不會因為節點數量越來越多使得前次檔位的重要性在後面的層數中被稀釋掉。最後參考了ResNet的部分因為我們不希望模型的層數太深，但是又希望可以提高預測能力，所以加入了殘差架構，讓我們在層數不高的情況下可以有一定程度的效果。
+
+
+
+\subsection{加入圖資進行判斷}
+利用前面提到的方式對收集到的生理與環境資訊，可以對大部分狀況進行有效且合理的判斷，但是若處於人造場景時會有一些坡度變化不明顯，生理上也沒有明顯改變，可是因為路口或是交通號誌導致需要停車再行路段時，若處於較高的檔位可能會因此產生騎乘上的不舒服感。或是前方有橋梁時，若是使用前面提到之方式對收集的感測器資訊進行判斷，要等到騎上橋才會開始進行換檔。上述這些狀況利用圖資的訊息提前進行判斷，就可以有效使騎乘者有更好的騎乘體驗。
+
+我們採用OpenStreetMap此免費地圖資訊作為參考依據。實作是透過查詢目前的經緯度資訊，確定周圍使否有會影響對決策的重要標記，將其記錄下來作為訓練時的其中一個參考依據。目前考慮的會影響對決策之重要標記僅包含了~highway : crossing~。圖\ref{OSM}\footnote{圖片出自https://overpass-turbo.eu/} 是含有crossing標記的節點，圖\ref{OSMdata}最右邊~map inf~是這類型資料在整個資料內的形式， 1代表50公尺內沒有這些標記，其餘的值代表現在位置與該標記經緯度的平方差值。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/OSM.png}
+	\caption{OpenStreetMap校內其中一個節點的示意圖，該節點有著crossing此重要的標籤資訊}
+	\label{OSM}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/OSMdata.png}
+	\caption{OpenStreetMap資訊在我們的資料中的表現形式(map~inf)，map~inf為重要的標記點距離目前位置的平方差距離，若為1則是範圍內沒有重要的標記。}
+	\label{OSMdata}
+\end{figure}
+
+\section{雲端建置與網頁架設}
+網頁\footnote{網頁連結:\href{https://vision.ee.ccu.edu.tw/intellibike/home.html}{https://vision.ee.ccu.edu.tw/intellibike/home.html}}的建置在\cite{9026293}架設的網頁基礎上進行完善，資料庫使用MySQL平台，網頁模板為HTML5 UP所提供\footnote{HTML5 UP網頁模板license : https://html5up.net/license}，主要功能有管理者登入、騎乘資訊查詢、資料登錄、資料分析這幾個部分，且管理者可以查詢多個騎乘者的狀況。
+
+架構如圖\ref{webflow}所示，主要分為登入前與登入後兩個部分，登入前僅可察看首頁資訊，其他相關功能需要進行登入的動作後才可瀏覽操作，例如資料上傳、資料查詢、檔位分析等功能。
+
+圖\ref{home}是網頁的首頁，僅介紹了一些基礎的訊息，其餘的內容需要登入後方可使用，圖\ref{webdata}是查詢資料頁面，可透過日期、時間、騎乘者查找要確認的資料，圖\ref{analysis}為查詢後並進行分析之結果，預測使用兩階段隨機森林，ground turth是騎乘時真正的檔位訊息，兩張路線圖中不同的顏色代表了不同的檔位。更下方的折線圖是各個感測器對應時間點所偵測到的讀值。圖\ref{webdata}是資料上傳頁面，選擇要上傳的檔案後點擊上傳按鈕，將所選的資料上傳至資料庫，並在下方顯示相關資訊。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/web/web_v2.pdf}
+	\caption{網頁架構圖，資料的查詢、上傳只能在登入後執行，登入前僅可以執行登入、註冊相關的操作}
+	\label{webflow}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/web/home.png}
+	\caption{網頁首頁:包含實驗室基礎資訊}
+	\label{home}
+\end{figure}
+
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=1\textwidth]{Image/web/login.png}
+%	\caption{登入}
+%	\label{login}
+%\end{figure}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=1\textwidth]{Image/web/signup.png}
+%	\caption{註冊}
+%	\label{signup}
+%\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/web/data.png}
+	\caption{網頁資料查詢: 可使用選單選擇日期、driver、時間並查詢符合設定的資料}
+	\label{webdata}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/web/analysis.png}
+	\caption{網頁資料分析: 點選查詢後即對資料進行簡易的分析(右上地圖)，並畫出該時間段內所有資料的數值。}
+	\label{analysis}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Image/web/upload.png}
+	\caption{網頁資料上傳: 選擇要上傳的csv檔案}
+	\label{upload}
+\end{figure}

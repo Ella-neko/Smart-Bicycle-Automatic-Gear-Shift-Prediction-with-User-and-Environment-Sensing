@@ -1,0 +1,1126 @@
+
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>  <html lang="zh-tw" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html lang="zh-tw" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html lang="zh-tw" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html lang="zh-tw" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="zh-tw"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh-tw">             <!--<![endif]-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Turnitin, LLC" />
+    <meta name="keywords" content="" /> 
+    <meta name="description" content="" />
+<title>Turnitin</title>
+
+<base href="http://www.turnitin.com">
+<style type="text/css">
+body	{
+	color: #333;
+	background: #C0C7CC;
+	padding: 0;
+	border: 0;
+	font: 13px Verdana, arial, sans-serif;
+	margin: 0;
+	}
+	
+form	{
+	padding: 0;
+	margin: 0;
+	}
+	
+body#display	{
+	}
+	
+body#bodysource	{
+	width: 520px;
+	background: #F0F4FA;
+	}
+	
+p	{
+	padding: 10px 18px;
+	margin: 0;
+	}
+	
+img	{
+	border: 0;
+	padding: 0;
+	}
+
+div	{
+	padding: 0;
+	border: 0;
+	}
+	
+iframe	{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	}
+	
+strong	{
+	font-weight: bold;
+	}
+	
+ul	{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 13px;
+	}
+	
+ul li	{
+	padding: 0;
+	margin: 0;
+	line-height: 16px;
+	}
+	
+#index span#exclude	{
+	margin: 0 50px 0 23px;
+	}
+	
+#index a	{
+	font-size: 11px;
+	padding: 0 8px;
+	}
+	
+#index select	{
+	font-size: 12px;
+	border: 1px solid #888;
+	}
+	
+#index input.small	{
+	margin: 0 0 0 5px;
+	width: 30px;
+	color: #D10A0A;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid #888;
+	vertical-align: baseline;
+	}
+		
+div.links	{
+	width: 85%;
+	margin: 0 auto;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	padding-top: 8px;
+	background: #E8EEF7;
+	text-align: left;
+	}
+	
+.links div	{
+	padding: 5px 13px 10px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div p	{
+	padding: 2px 0 0 40px;
+	}
+	
+div#body	{
+	line-height: 17px;
+	width: 85%;
+	margin: auto;
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid #888;
+	border-right: 1px solid #888;
+	border-left: 1px solid #888;
+	text-align: left;
+	}
+	
+#body p	{
+	color: #000;
+	padding-top: 10 0;
+	margin: 0 40px;
+	}
+#actions {
+	display: none;
+	}
+
+a.exclude	{
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 20px;
+    }
+
+/*= GENERAL 
+=== === === === === === === === === === === === === === === === === === === === === === === === === === === === === === */	
+
+body  #top_bar {
+display: none !important;
+}
+
+body #index #exclude,
+#download_button,
+#print_button,
+#index .right {
+display: inline-block;
+}
+
+body #index {
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+border: 1px solid #999;
+background: #ececec url(new_dynamic/images/22bd7a01a025b8de122259e42762f0a7cb_ug_toolbar_bg.gif) repeat-x center left;
+}
+
+#toolbar_wrapper {
+padding-left:45px;
+}
+
+body #top {
+width: 85%;
+background-color: #FFF;
+margin-left: auto;
+margin-right: auto;
+border: 1px solid #999;
+border-bottom: none;
+height: 210px;
+}
+body #content {
+padding: 10px 60px;
+}
+body div#prefs {
+display: none;
+}
+
+body #top h2 {
+font-size: 20px;
+font-weight: normal;
+}
+
+body #top h2 strong {
+font-weight: normal;
+}
+body #top h2 em {
+font-style: normal;
+}
+
+
+body #top h3 {
+font-size: 16px;
+font-weight: normal;
+}
+
+body #top h3 strong {
+font-weight: normal;
+}
+body #top h3 em {
+font-style: normal;
+}
+
+        
+        body #top_body li	{/*Paper info li*/
+            padding:0;
+            margin: 0px 0px 2px 0px;
+            font-size: 10px;
+            }
+            
+            #top_body #print_wrapper {
+                float:left;
+                width: 50%;
+            }
+            
+            #top_body .similarity_print_wrapper {
+                width: 45%;
+                min-width: 283px;
+            }
+                
+            #top_body .similarity_box { /*Similiarity Box w/ Similarity by Source */
+                float: right;
+                border: solid 1px #666;
+                margin-top: 60px;
+                width: 350px;
+            }
+                #top_body .similarity_box .overall_similarity {
+                    float: left;
+                    border-right: solid 1px #666;
+                }
+                    #top_body .similarity_box .overall_similarity .color_box {
+                        font-size: 14px;
+                        width: 140px;
+                    }
+                        #top_body .color_box.green {
+                            background-color: green;
+                        }
+                        #top_body .color_box.blue {
+                            background-color: blue;
+                        }
+                        #top_body .color_box.yellow {
+                            background-color: yellow;
+                        }
+                        #top_body .color_box.orange {
+                            background-color: orange;
+                        }
+                        #top_body .color_box.red {
+                            background-color: red;
+                        }
+
+                    #top_body .similarity_box .overall_similarity .similarity_title {
+                        font-size: 13px;
+                        font-weight: normal;
+                        padding: 5px 0px 0px;
+                        text-align: center;
+                    }
+
+                    #top_body .similarity_box .overall_similarity .similarity_percent {
+                        font-size: 25px;
+                        font-family: georgia, times, serif;
+                        padding: 5px 0px 15px;
+                        text-align: center;
+                    }
+
+                    #top_body .similarity_box .overall_similarity a {
+                         display: none;
+                    }
+
+                #top_body .similarity_box .similarity_by_source {
+                     float: right;
+                     font-size: 10px;
+                }
+                    #top_body .similarity_box .similarity_by_source .similarity_title {
+                         padding: 6px 0px 0px 10px;
+                         font-weight: bold;
+                         text-align: left;
+                    }
+                    #top_body .similarity_box .similarity_by_source dl {
+                        padding-left: 10px;
+                        margin: 14px 7px 0px 0px;
+                    }
+                    #top_body .similarity_box .similarity_by_source dt {
+                         float: left;
+                         width: 160px;
+                    }
+                    #top_body .similarity_box .similarity_by_source dd {
+                        float: left;
+                        margin: 0px;
+                    }
+
+	
+		
+#index span#exclude	{
+	margin: 0 50px 0 23px;
+	}
+	
+#index a	{
+	font-size: 11px;
+	padding: 0 8px;
+	}
+	
+#index select	{
+	font-size: 12px;
+	border: 1px solid #888;
+	}
+	
+#index input.small	{
+	margin: 0 0 0 5px;
+	width: 30px;
+	color: #D10A0A;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid #888;
+	vertical-align: baseline;
+	}
+		
+div.links	{
+	width: 85%;
+	margin: 0 auto;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	padding-top: 8px;
+	background: #E8EEF7;
+	text-align: left;
+	}
+	
+.links div	{
+	padding: 5px 13px 10px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div p	{
+	padding: 2px 0 0 40px;
+	}
+	
+div#body	{
+	line-height: 17px;
+	width: 85%;
+	margin: auto;
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid #888;
+	border-right: 1px solid #888;
+	border-left: 1px solid #888;
+	text-align: left;
+	}
+	
+#body p	{
+	color: #000;
+	padding-top: 10 0;
+	margin: 0 40px;
+	}
+#actions {
+	display: none;
+	}
+
+a.exclude	{
+	float: right;
+	margin: 0;
+	padding: 0;
+	}
+	
+#small_matches_prefs {
+    display:none;
+}
+
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+.yui-button{display:-moz-inline-box;display:inline-block;vertical-align:text-bottom;}.yui-button .first-child{display:block;*display:inline-block;}.yui-button button,.yui-button a{display:block;*display:inline-block;border:none;margin:0;}.yui-button button{background-color:transparent;*overflow:visible;cursor:pointer;}.yui-button a{text-decoration:none;}.yui-skin-sam .yui-button{border-width:1px 0;border-style:solid;border-color:#808080;background:url(../images/yui270/build/assets/skins/sam/96b257a32a932f7739d7dab52b38ee8fcb_sprite.png) repeat-x 0 0;margin:auto .25em;}.yui-skin-sam .yui-button .first-child{border-width:0 1px;border-style:solid;border-color:#808080;margin:0 -1px;_margin:0;}.yui-skin-sam .yui-button button,.yui-skin-sam .yui-button a{padding:0 10px;font-size:93%;line-height:2;*line-height:1.7;min-height:2em;*min-height:auto;color:#000;}.yui-skin-sam .yui-button a{*line-height:1.875;*padding-bottom:1px;}.yui-skin-sam .yui-split-button button,.yui-skin-sam .yui-menu-button button{padding-right:20px;background-position:right center;background-repeat:no-repeat;}.yui-skin-sam .yui-menu-button button{background-image:url(yui270/build/button/assets/skins/sam/6305efb37fa05af65c79b58b9d4c1b03cb_menu-button-arrow.png);}.yui-skin-sam .yui-split-button button{background-image:url(yui270/build/button/assets/skins/sam/ced974d5c685e5dfa0a37b824a6b5d48cb_split-button-arrow.png);}.yui-skin-sam .yui-button-focus{border-color:#7D98B8;background-position:0 -1300px;}.yui-skin-sam .yui-button-focus .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-button-focus button,.yui-skin-sam .yui-button-focus a{color:#000;}.yui-skin-sam .yui-split-button-focus button{background-image:url(yui270/build/button/assets/skins/sam/36e66540d2feba76b8991e18b76fe93bcb_split-button-arrow-focus.png);}.yui-skin-sam .yui-button-hover{border-color:#7D98B8;background-position:0 -1300px;}.yui-skin-sam .yui-button-hover .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-button-hover button,.yui-skin-sam .yui-button-hover a{color:#000;}.yui-skin-sam .yui-split-button-hover button{background-image:url(yui270/build/button/assets/skins/sam/36e66540d2feba76b8991e18b76fe93bcb_split-button-arrow-hover.png);}.yui-skin-sam .yui-button-active{border-color:#7D98B8;background-position:0 -1700px;}.yui-skin-sam .yui-button-active .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-button-active button,.yui-skin-sam .yui-button-active a{color:#000;}.yui-skin-sam .yui-split-button-activeoption{border-color:#808080;background-position:0 0;}.yui-skin-sam .yui-split-button-activeoption .first-child{border-color:#808080;}.yui-skin-sam .yui-split-button-activeoption button{background-image:url(yui270/build/button/assets/skins/sam/890272b241c1d8a0db3ce5680b71fab0cb_split-button-arrow-active.png);}.yui-skin-sam .yui-radio-button-checked,.yui-skin-sam .yui-checkbox-button-checked{border-color:#304369;background-position:0 -1400px;}.yui-skin-sam .yui-radio-button-checked .first-child,.yui-skin-sam .yui-checkbox-button-checked .first-child{border-color:#304369;}.yui-skin-sam .yui-radio-button-checked button,.yui-skin-sam .yui-checkbox-button-checked button{color:#fff;}.yui-skin-sam .yui-button-disabled{border-color:#ccc;background-position:0 -1500px;}.yui-skin-sam .yui-button-disabled .first-child{border-color:#ccc;}.yui-skin-sam .yui-button-disabled button,.yui-skin-sam .yui-button-disabled a{color:#A6A6A6;cursor:default;}.yui-skin-sam .yui-menu-button-disabled button{background-image:url(yui270/build/button/assets/skins/sam/4df7235ca027f2546b2a216e59f81fb0cb_menu-button-arrow-disabled.png);}.yui-skin-sam .yui-split-button-disabled button{background-image:url(yui270/build/button/assets/skins/sam/db73dce6da2f5c5f02399c93488ce69ecb_split-button-arrow-disabled.png);}
+
+</style>
+
+</head>
+
+<body onload="">
+
+
+
+<link rel="stylesheet" type="text/css" href="/r/build/css/tii/88ee4ccd3555f2b759921fb5d58d83e5cb_container.css" media="all" />
+
+
+
+
+<script type="text/javascript" src="/r/build/js/tii/8b608684a5f4aec1b540987c93498c01cb_tii_anonymous_marking.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+function initAnonymousMarking () {
+    // initialize panel.  
+    var config = {
+            zindex: 4,
+            underlay: 'none',
+            modal: true,
+            visible: false,
+            draggable: false,
+            close: false,
+            fixedcenter: true
+    };
+    if ($('disable_anonymous_marking')) {
+        disableAnonymousMarkingPanel = new IP.widget.Panel($('disable_anonymous_marking'), config);
+        if($D.hasClass('disable_anonymous_marking', 'app')) {
+            disableAnonymousMarkingPanel.center = function () {
+                var nViewportOffset = 20,
+                    elementWidth = this.element.offsetWidth,
+                    elementHeight = this.element.offsetHeight,
+                    viewPortWidth = $D.getViewportWidth(),
+                    viewPortHeight = $D.getViewportHeight(),
+                    x,
+                    y;
+
+                if (elementWidth < viewPortWidth) {
+                    x = (viewPortWidth / 2) - (elementWidth / 2) + $D.getDocumentScrollLeft();
+                } else {
+                    x = nViewportOffset + $D.getDocumentScrollLeft();
+                }
+
+				if (browser == 'Internet Explorer') {
+					x = 0;
+				}
+                y = 2 + $D.getDocumentScrollTop();
+
+                this.cfg.setProperty("xy", [parseInt(x, 10), parseInt(y, 10)]);
+                this.cfg.refireEvent("iframe");
+            };
+        }
+        disableAnonymousMarkingPanel.render(document.body);
+        disableAnonymousMarkingPanel.hideEvent.subscribe(function () { $('anonymous_error').innerHTML = ''; }, false);
+        disableAnonymousMarkingPanel.hide();
+        Element.show($('disable_anonymous_marking'));
+    }
+}
+
+function disableAM (data) {
+    $('anonymous_title').innerHTML = data.title;
+    document.disable_anonymous_marking_form.objectid.value = data.oid;
+    disableAnonymousMarkingPanel.show();
+}
+
+function checkDisableAM () {
+    var form = document.disable_anonymous_marking_form;
+    if (form.reason.value.length <= 5) {
+        $('anonymous_error').innerHTML = "請提供關閉匿名標記的理由。";
+    }
+    else {
+        form.submit();
+    }
+    return;
+}
+
+YAHOO.util.Event.onDOMReady(initAnonymousMarking);
+
+</script>
+
+<div id="disable_anonymous_marking" class="app" style="display: none;">
+<div class="anonymous_frames">
+<form method="post" name="disable_anonymous_marking_form">
+    <input type="hidden" name="objectid" value=""/>
+    <input type="hidden" name="disable_anonymous_marking" value="1"/> 
+    <div class="anonymous_header">
+    	<h1>關閉匿名標記</h1>
+		<p>請說明關閉匿名標記的原因： <span id="anonymous_title"></span><br />
+			<strong>警告: 管理員已經取得了這個資訊。這個設置是永久性的。</strong>
+        
+            </p>
+        
+    </div>
+    <div class="anonymous_body">
+        <textarea name="reason" cols="30" rows="3"></textarea>
+        <p id="anonymous_error"></p>
+    </div>
+    <div class="anonymous_footer">
+		<div class="anonymous_footer_buttons">
+    		<span class="submit_form_button"><input type="button" onClick="checkDisableAM();" value="提交"></span><br>
+        	<span class="submit_form_button"><input type="button" value="取消" onClick="disableAnonymousMarkingPanel.hide();"></span>
+		</div>
+    </div>
+</form>
+</div>
+</div>
+<div id="actions">
+<p>這是您的報告列印版的預覽。請點選 "列印"以繼續或 "結束" 以關此視窗。</p>
+<script type="text/javascript" language="javascript">
+	var browserName=navigator.appName;
+	var browserVer=parseInt(navigator.appVersion);
+	if ((navigator.appVersion.indexOf("Mac")!=-1) && (browserName == "Microsoft Internet Explorer")) {
+		document.write('<span class="AR10">鍵入 COMMAND-P 可列印。</span><br><br>');
+	} else {
+		document.write('<a href="javascript:window.print();">列印</a>&nbsp;&nbsp;');
+	}
+</script>
+<a href="javascript:window.close();">完成</a>
+</div>
+
+
+<!-- ########################### Preferences pop-up ##########################--> 
+<div id="prefs" style="visibility:hidden">
+<div class="padding">
+<form name="prefs_form" method="post" accept-charset="utf-8">
+<script type="text/javascript" language="javascript">
+function savePrefs(){
+	if (document.prefs_form.changed.value == 1){
+		document.prefs_form.submit();
+	}else{
+        hidePrefsPane();
+	}
+}
+
+function showPrefsPane(){
+    document.getElementById('prefs').style.visibility='visible';
+    document.getElementById('use_colors').focus();
+}
+
+function hidePrefsPane(){
+    document.getElementById('prefs').style.visibility='hidden';
+    document.getElementById('prefs_link').focus();
+}
+
+
+var overlay;
+function showSmallMatchExclusions() {
+    var linkRegion = $D.getRegion('exclude_small_matches_link');
+    var panelRegion = $D.getRegion('small_matches_prefs');
+    var indexRegion = $D.getRegion('index');
+    
+    var topLocation = indexRegion.bottom;
+    $D.setStyle('small_matches_prefs', 'top', topLocation + 'px');
+    $D.setStyle('small_matches_prefs', 'left', linkRegion.left + 'px');
+    
+    $D.setStyle('small_matches_prefs', 'visibility', 'visible');
+
+    // focus the field
+    $D.hasClass('exclude_by_percent_row', 'selected') ? $('exclude_by_percent_value').focus() : $('exclude_by_words_value').focus();
+}
+
+function hideSmallMatchExclusions() {
+    $D.setStyle('small_matches_prefs', 'visibility', 'hidden');
+}
+
+function selectSmallExclusionMethod(enableType) {
+    if(enableType == 'words') {
+        $('exclude_by_words_value').focus();
+        
+        $D.addClass('exclude_by_words_row', 'selected');
+        $D.removeClass('exclude_by_percent_row', 'selected');
+        $D.removeClass('exclude_by_words_row', 'disabled');
+        $D.addClass('exclude_by_percent_row', 'disabled');
+    }
+    else {
+        $('exclude_by_percent_value').focus();
+        
+        $D.removeClass('exclude_by_words_row', 'selected');
+        $D.addClass('exclude_by_percent_row', 'selected');
+        $D.addClass('exclude_by_words_row', 'disabled');
+        $D.removeClass('exclude_by_percent_row', 'disabled');
+    }
+}
+
+function updateExcludePercentage(wordCount) {
+    var percent = Math.floor(wordCount / 16461 * 100);
+    
+    $('exclude_by_percent_value').value = percent;
+}
+
+function updateExcludeWordCount(percent) {
+    var wordCount = Math.floor((percent/100) * 16461);
+    
+    $('exclude_by_words_value').value = wordCount;
+}
+
+function submitSmallMatchesChange() {
+    var excludeBy = $D.hasClass('exclude_by_percent_row', 'selected') ? 'percent' : 'words';
+    var excludeValue = excludeBy == 'percent' ? $('exclude_by_percent_value').value : $('exclude_by_words_value').value;
+    
+    changeSmallMatchExclusion(excludeBy, parseInt(excludeValue), 16461);
+}
+
+</script>
+</script>
+<input type="hidden" name="changed" value="0">
+        <div class="pref_rows">
+                <label for="use_colors">色彩代碼媒合:</label>
+                <select id="use_colors" name="use_colors" onchange="document.prefs_form.changed.value=1">
+                    <option value="1">是
+                    <option value="0">否
+                </select>
+                <div class="clear"></div>
+        </div>
+        <div class="pref_rows">
+                <label for="def_report_mode">預設模式:</label>
+                <select id="def_report_mode" name="def_report_mode" onchange="document.prefs_form.changed.value=1">
+                    <option value="0">將高度相符處一起顯示
+                    <option value="1">一次顯示一筆相符處
+                    <option value="2">快速觀看(典型的)報告
+                </select>
+                <div class="clear"></div>
+        </div>
+        <div class="pref_rows">
+                <label for="report_scrolling">自動導覽:</label>
+                <select id="report_scrolling" name="report_scrolling" onchange="document.prefs_form.changed.value=1">
+                    <option value="0">跳到下一個相符處
+                    <option value="1">到下一個相符處
+                </select>
+                <div class="clear"></div>
+        </div>
+        
+        <div id="prefs_confirm">
+            <button onClick="savePrefs()" >儲存 </button>  
+         <a href="javascript:void(0);" onClick="hidePrefsPane();">取消</a>
+        </div>
+</form>
+</div>
+</div>
+<!-- ########################### END Preferences pop-up  ##########################--> 
+
+<!-- ########################### BEGIN small matches pop-up  ##########################--> 
+<div id="small_matches_prefs">
+    <form onsubmit="submitSmallMatchesChange(); return false;">
+        <ul>
+            <li id="exclude_by_words_row" class="selected">
+                <label for="exclude_by_words_value">字數: </label>
+                <input type="text" id="exclude_by_words_value" size="3" value="" onkeyup="updateExcludePercentage(this.value)" onfocus="selectSmallExclusionMethod('words')"> 字
+            </li>
+            <li id="exclude_by_percent_row" class="disabled">
+                <label for="exclude_by_percent_value">百分比: </label>
+                <input type="text" id="exclude_by_percent_value" size="3" value="" max-length="3" onkeyup="updateExcludeWordCount(this.value)" onfocus="selectSmallExclusionMethod('percent')"> %
+            </li>
+        </ul>
+        <p><input type='submit' value="提交"> 或者 <a href="javascript:hideSmallMatchExclusions()">取消</a></p>
+    </form>
+</div>
+
+<!-- ########################### END small matches pop-up  ##########################-->
+
+<!-- ########################### Top of Report  ##########################--> 
+<div id="top">
+    <div id="content">
+    
+        <!-- ######### Top Bar  ##########################--> 
+        <div id="top_bar">
+                <ul id="top_bar_list1">
+                      <!-- Preferences --><li><a id="prefs_link" href="javascript:showPrefsPane();">preferences</a></li> 
+                </ul>
+                <ul id="top_bar_list2">
+                      
+                </ul>
+                <div class="clear"></div>
+        </div>   
+        <!-- ######### END Top Bar  ##########################--> 
+        
+        
+        <!-- ######### Top Body  ##########################--> 
+        <div id="top_body">
+        
+            <div id="print_wrapper">
+                <div class="general_info">
+                    <!-- Logo --> 
+                    <h2>
+                        <span class=""></span>
+                        <strong>Turnitin</strong>
+                        <em>原創性報告</em>
+                     </h2>
+                 
+                     <!-- Paper Info -->               
+                     <ul>
+                         <li>已處理到: 17-7月-2021 15:02 CST</li>
+                         <li>代碼: 1616667739 </li>
+                         <li>字數: 16461</li>
+                         <li>已提交 : 2</li>
+                     </ul>
+                </div>
+
+                 <!-- Paper Title --> 
+                <h3>
+                    <strong>利用環境資訊及騎乘數據進行自行車檔位預測</strong> 
+                    
+                    <em>經由 承學 何</em>
+                    
+                </h3>
+            </div>
+            
+            <div id="similarity_print_wrapper">
+                <div class="similarity_box">
+                    <div class="overall_similarity">
+                        <div class="color_box green">&nbsp;</div>
+                        <div class="similarity_title">相似度指標</div>
+                        <div class="similarity_percent">6%</div>
+                    </div>
+                    <div class="similarity_by_source">
+                        <div class="similarity_title">依來源標示相似度</div>
+                        <dl>
+                            <dt>Internet&nbsp;Sources:</dt>
+                            <dd>6%</dd>
+                            <div class="clear"></div>
+                            <dt>出版物:</dt>
+                            <dd>3%</dd>
+                            <div class="clear"></div>
+                            <dt>學生文稿:</dt>
+                            <dd>3%</dd>
+                            <div class="clear"></div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+                                 
+        </div>
+        <!-- ######### END Top Body  ##########################--> 
+        
+        
+    </div>
+</div>
+<!-- ########################### END Top of Report  ##########################--> 
+
+
+
+<!-- ########################### TOOLBAR  ##########################--> 
+<div id="index">
+	<div id="toolbar_wrapper">
+        
+	</div>
+</div>
+<!-- ########################### END TOOLBAR  ##########################--> 
+
+
+<div class="links">
+	<div>
+	<p>< 1% match (從 2021年05月10日 來的網絡)</p>
+
+	<p><a href="https://arxiv.org/pdf/2008.13751.pdf" target="_blank" style="color:#D10A0A">https://arxiv.org/pdf/2008.13751.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2018年12月09日 來的網絡)</p>
+
+	<p><a href="https://arxiv.org/pdf/1804.08348.pdf" target="_blank" style="color:#287B28">https://arxiv.org/pdf/1804.08348.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match ()</p>
+
+	<p><a href="http://arxiv.org/abs/2011.07876" target="_blank" style="color:blue">Burkart, Nadia, Huber, Marco F.. "A Survey on the Explainability of Supervised Machine Learning", 'AI Access Foundation', 2020</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2021年05月19日 來的網絡)</p>
+
+	<p><a href="https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf" target="_blank" style="color:brown">https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年07月12日 來的網絡)</p>
+
+	<p><a href="https://max.book118.com/html/2017/0731/125442717.shtm" target="_blank" style="color:#B64B01">https://max.book118.com/html/2017/0731/125442717.shtm</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年08月30日 來的學生文稿)</p>
+
+	<p><a href="javascript:openDSC(605967786,2,'0')" target="_blank" style="color:#630000">Submitted to Loughborough University   on 2019-08-30</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年10月04日 來的網絡)</p>
+
+	<p><a href="https://ctimes.com.tw/DispArt-cn.asp?k=%E6%99%BA%E6%85%A7%E8%AE%8A%E6%AA%94%2F%E8%9D%B8%E8%BC%AA%E8%9D%B8%E6%A1%BF%E8%AE%8A%E9%80%9F%E6%A9%9F%E6%A7%8B%2F%E7%9B%9B%E7%BE%A4%2F%E8%87%AA%E8%A1%8C%E8%BB%8A&o=1711141557XA" target="_blank" style="color:#0270B6">https://ctimes.com.tw/DispArt-cn.asp?k=%E6%99%BA%E6%85%A7%E8%AE%8A%E6%AA%94%2F%E8%9D%B8%E8%BC%AA%E8%9D%B8%E6%A1%BF%E8%AE%8A%E9%80%9F%E6%A9%9F%E6%A7%8B%2F%E7%9B%9B%E7%BE%A4%2F%E8%87%AA%E8%A1%8C%E8%BB%8A&o=1711141557XA</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年09月23日 來的網絡)</p>
+
+	<p><a href="http://jultika.oulu.fi/files/nbnfi-fe2019091628303.pdf" target="_blank" style="color:#330099">http://jultika.oulu.fi/files/nbnfi-fe2019091628303.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="https://www.jstage.jst.go.jp/article/ieejeiss/139/7/139_774/_article/-char/ja/" target="_blank" style="color:#227967">Takuhiro Sato, Riki Kurematsu, Tatsushi Tokuyasu. "両下肢の筋シナジーに基づいたペダリング技術の熟練度評価の試み", IEEJ Transactions on Electronics, Information and Systems, 2019</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="https://ieeexplore.ieee.org/document/8439456/" target="_blank" style="color:#CB0099">Vladimir Dimitrov. "Overview of the Ways to Design an Electric Bicycle", 2018 IX National Conference with International Participation (ELECTRONICA), 2018</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2021年06月07日 來的網絡)</p>
+
+	<p><a href="https://vision.ee.ccu.edu.tw/hueiyung/" target="_blank" style="color:#006331">https://vision.ee.ccu.edu.tw/hueiyung/</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2021年03月31日 來的學生文稿)</p>
+
+	<p><a href="javascript:openDSC(2003834744,1,'0')" target="_blank" style="color:#795AB9">Submitted to Cornell University on 2021-03-31</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2012年05月18日 來的網絡)</p>
+
+	<p><a href="http://www.ntc-dz.net/ntcremindianzu/20120125/950.html" target="_blank" style="color:#935F32">http://www.ntc-dz.net/ntcremindianzu/20120125/950.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2020年03月19日 來的網絡)</p>
+
+	<p><a href="https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20200001546.pdf" target="_blank" style="color:#ce0031">https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20200001546.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://journals.sagepub.com/doi/10.2466/pms.1992.74.2.489" target="_blank" style="color:#866712">R. Lee Kirby. "The Cardiac-Locomotor Coupling Phenomenon: The Contribution of Coleman", Perceptual and Motor Skills, 2016</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="https://doi.org/10.1109/ACCESS.2021.3070575" target="_blank" style="color:#63009c">Haoran Luo, Fan Cheng, Heng Yu, Yuqi Yi. "SDTR: Soft Decision Tree Regressor for Tabular Data", IEEE Access, 2021</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2017年12月20日 來的學生文稿)</p>
+
+	<p><a href="javascript:openDSC(80500421,2,'0')" target="_blank" style="color:#A85503">Submitted to University of Birmingham  on 2017-12-20</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年12月27日 來的學生文稿)</p>
+
+	<p><a href="javascript:openDSC(614831702,2,'0')" target="_blank" style="color:#cc0066">Submitted to University of Nottingham  on 2019-12-27</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年08月20日 來的網絡)</p>
+
+	<p><a href="http://store.sony.com.tw/hi-res/hiresaudio.aspx" target="_blank" style="color:#21785B">http://store.sony.com.tw/hi-res/hiresaudio.aspx</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2017年08月31日 來的網絡)</p>
+
+	<p><a href="http://uu.diva-portal.org/smash/get/diva2:1033169/FULLTEXT01.pdf" target="_blank" style="color:#336699">http://uu.diva-portal.org/smash/get/diva2:1033169/FULLTEXT01.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年06月17日 來的網絡)</p>
+
+	<p><a href="http://www.admin.ltu.edu.tw:8000/Public/Upload/files/A008002.pdf" target="_blank" style="color:#D10A0A">http://www.admin.ltu.edu.tw:8000/Public/Upload/files/A008002.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2014年01月02日 來的網絡)</p>
+
+	<p><a href="http://www.cjzdsb.com/xinwendongtai/detail/702.html" target="_blank" style="color:#287B28">http://www.cjzdsb.com/xinwendongtai/detail/702.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2016年10月28日 來的學生文稿)</p>
+
+	<p><a href="javascript:openDSC(728230305,1,'0')" target="_blank" style="color:blue">Submitted to Xiamen University on 2016-10-28</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2021年06月16日 來的學生文稿)</p>
+
+	<p><a href="javascript:openDSC(2069378423,1,'0')" target="_blank" style="color:brown">Submitted to National Chengchi University on 2021-06-16</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2020年08月03日 來的網絡)</p>
+
+	<p><a href="http://docplayer.com.br/41866861-O-biodiesel-e-sua-relacao-com-a-incorporacao-de-novas-areas-e-producao-de-soja-no-parana.html" target="_blank" style="color:#B64B01">http://docplayer.com.br/41866861-O-biodiesel-e-sua-relacao-com-a-incorporacao-de-novas-areas-e-producao-de-soja-no-parana.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年06月08日 來的網絡)</p>
+
+	<p><a href="http://abook.cn/pdf/2331.0201.pdf" target="_blank" style="color:#630000">http://abook.cn/pdf/2331.0201.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2015年07月08日 來的網絡)</p>
+
+	<p><a href="http://ethesys.lib.cyut.edu.tw/ETD-db/ETD-search/getfile?URN=etd-0807108-123849&filename=etd-0807108-123849.pdf" target="_blank" style="color:#0270B6">http://ethesys.lib.cyut.edu.tw/ETD-db/ETD-search/getfile?URN=etd-0807108-123849&filename=etd-0807108-123849.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年01月13日 來的網絡)</p>
+
+	<p><a href="http://goldenfung.blogspot.com/2009/05/10-1.html" target="_blank" style="color:#330099">http://goldenfung.blogspot.com/2009/05/10-1.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2015年06月22日 來的網絡)</p>
+
+	<p><a href="http://libserver2.nhu.edu.tw/ETD-db/ETD-search/getfile?URN=etd-0115107-224300&filename=etd-0115107-224300.pdf" target="_blank" style="color:#227967">http://libserver2.nhu.edu.tw/ETD-db/ETD-search/getfile?URN=etd-0115107-224300&filename=etd-0115107-224300.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2021年05月15日 來的網絡)</p>
+
+	<p><a href="https://papers.neurips.cc/paper/2020/file/b86e8d03fe992d1b0e19656875ee557c-Paper.pdf" target="_blank" style="color:#CB0099">https://papers.neurips.cc/paper/2020/file/b86e8d03fe992d1b0e19656875ee557c-Paper.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2005年11月29日 來的網絡)</p>
+
+	<p><a href="http://www.ift.ulaval.ca/~desharnais/Recherche/Theses/memoire.Andre.pdf" target="_blank" style="color:#006331">http://www.ift.ulaval.ca/~desharnais/Recherche/Theses/memoire.Andre.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2013年12月30日 來的網絡)</p>
+
+	<p><a href="http://www.pmsuccess.com.tw/detail_scholarship.asp?r=45.0165138940996&svr=43&lang=zh_tw&M_id=110030&CLAid=C20120330398&category=1" target="_blank" style="color:#795AB9">http://www.pmsuccess.com.tw/detail_scholarship.asp?M_id=110030&CLAid=C20120330398&category=1</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2020年12月30日 來的網絡)</p>
+
+	<p><a href="http://czkj.ci.cqvip.com/zk/search.asp?r=45.0165138940996&svr=43&lang=zh_tw&x?key=K%3D%5B%E5%85%89%E9%A2%91%E5%9F%9F%E5%8F%8D%E5%B0%84%E8%AE%A1%5D" target="_blank" style="color:#935F32">http://czkj.ci.cqvip.com/zk/search.aspx?key=K%3D%5B%E5%85%89%E9%A2%91%E5%9F%9F%E5%8F%8D%E5%B0%84%E8%AE%A1%5D</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2012年02月23日 來的網絡)</p>
+
+	<p><a href="http://home.aimei.tw/space.php?uid=1&do=blog&id=834" target="_blank" style="color:#ce0031">http://home.aimei.tw/space.php?uid=1&do=blog&id=834</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2021年04月17日 來的網絡)</p>
+
+	<p><a href="http://ir.lib.ksu.edu.tw/bitstream/987654321/580/1/%E5%B0%88%E9%A1%8C%E8%A3%BD%E4%BD%9C.pdf" target="_blank" style="color:#866712">http://ir.lib.ksu.edu.tw/bitstream/987654321/580/1/%E5%B0%88%E9%A1%8C%E8%A3%BD%E4%BD%9C.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2015年11月25日 來的網絡)</p>
+
+	<p><a href="http://nccur.lib.nccu.edu.tw/bitstream/140.119/34970/4/35501304.pdf" target="_blank" style="color:#63009c">http://nccur.lib.nccu.edu.tw/bitstream/140.119/34970/4/35501304.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2017年12月24日 來的網絡)</p>
+
+	<p><a href="https://toutiao.io/posts/7u6na" target="_blank" style="color:#A85503">https://toutiao.io/posts/7u6na</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2014年05月20日 來的網絡)</p>
+
+	<p><a href="http://www.coin-acceptor.com.cn/Upload/EditorFiles/technicalfile/%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8EGSM%E7%9A%84%E8%87%AA%E5%8A%A8%E5%94%AE%E8%B4%A7%E6%9C%BA%E6%97%A0%E7%BA%BF%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0.pdf" target="_blank" style="color:#cc0066">http://www.coin-acceptor.com.cn/Upload/EditorFiles/technicalfile/%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8EGSM%E7%9A%84%E8%87%AA%E5%8A%A8%E5%94%AE%E8%B4%A7%E6%9C%BA%E6%97%A0%E7%BA%BF%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2014年08月30日 來的網絡)</p>
+
+	<p><a href="http://www.sclq.org/solutions/20130523084557170.htm" target="_blank" style="color:#21785B">http://www.sclq.org/solutions/20130523084557170.htm</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2020年11月30日 來的網絡)</p>
+
+	<p><a href="https://www.techbang.com/posts/62863-2018-communication-contest-mediatek-technology-iot-development-competition-excellent-works" target="_blank" style="color:#336699">https://www.techbang.com/posts/62863-2018-communication-contest-mediatek-technology-iot-development-competition-excellent-works</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2018年01月16日 來的網絡)</p>
+
+	<p><a href="http://bbs.yncost.cn/archiver/showtopic-50681.html" target="_blank" style="color:#D10A0A">http://bbs.yncost.cn/archiver/showtopic-50681.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2016年06月20日 來的網絡)</p>
+
+	<p><a href="http://etds.lib.ncku.edu.tw/etdservice/detail?n=9&etdun1=U0026-0812200913550172&etdun2=U0026-0812200911581270&etdun3=U0026-0812200912073889&etdun4=U0026-0812200911514630&etdun5=U0026-0812200911520365&etdun6=U0026-0812200911542549&etdun7=U0026-0812200911545305&etdun8=U0026-0812200911582795&etdun9=U0026-0812200912131893" target="_blank" style="color:#287B28">http://etds.lib.ncku.edu.tw/etdservice/detail?n=9&etdun1=U0026-0812200913550172&etdun2=U0026-0812200911581270&etdun3=U0026-0812200912073889&etdun4=U0026-0812200911514630&etdun5=U0026-0812200911520365&etdun6=U0026-0812200911542549&etdun7=U0026-0812200911545305&etdun8=U0026-0812200911582795&etdun9=U0026-0812200912131893</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年02月14日 來的網絡)</p>
+
+	<p><a href="http://export.arxiv.org/pdf/1902.03999" target="_blank" style="color:blue">http://export.arxiv.org/pdf/1902.03999</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2021年07月01日 來的網絡)</p>
+
+	<p><a href="https://opus.hs-offenburg.de/export/index/ris/searchtype/all" target="_blank" style="color:brown">https://opus.hs-offenburg.de/export/index/ris/searchtype/all</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2018年10月04日 來的網絡)</p>
+
+	<p><a href="https://patents.google.com/patent/KR100679173B1/en" target="_blank" style="color:#B64B01">https://patents.google.com/patent/KR100679173B1/en</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2016年04月28日 來的網絡)</p>
+
+	<p><a href="http://www.anmose.com/html/skill-104658.html" target="_blank" style="color:#630000">http://www.anmose.com/html/skill-104658.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年06月23日 來的網絡)</p>
+
+	<p><a href="http://www.barrxxx.com/Article/wgrkzdzdlw.html" target="_blank" style="color:#0270B6">http://www.barrxxx.com/Article/wgrkzdzdlw.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2018年12月10日 來的網絡)</p>
+
+	<p><a href="http://www.bethel-cnc.com/bethel/news/show_912.html" target="_blank" style="color:#330099">http://www.bethel-cnc.com/bethel/news/show_912.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2015年11月05日 來的網絡)</p>
+
+	<p><a href="http://www.ccunix.ccu.edu.tw/%7Edeptkmc/resource/resource_2.pdf" target="_blank" style="color:#227967">http://www.ccunix.ccu.edu.tw/%7Edeptkmc/resource/resource_2.pdf</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2019年11月03日 來的網絡)</p>
+
+	<p><a href="http://www.cmtrshop.com/post/272.html" target="_blank" style="color:#CB0099">http://www.cmtrshop.com/post/272.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2020年08月16日 來的網絡)</p>
+
+	<p><a href="http://www.fjdnzx.com/cn/1608/15470.html" target="_blank" style="color:#006331">http://www.fjdnzx.com/cn/1608/15470.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2014年05月09日 來的網絡)</p>
+
+	<p><a href="http://www.seegot.cn/a/wangzhanlansan/peixun/898.html" target="_blank" style="color:#795AB9">http://www.seegot.cn/a/wangzhanlansan/peixun/898.html</a></p>
+
+
+	</div>
+	<div>
+	<p>< 1% match (從 2012年10月02日 來的網絡)</p>
+
+	<p><a href="http://www.sss988.com.cn/post/530.html" target="_blank" style="color:#935F32">http://www.sss988.com.cn/post/530.html</a></p>
+
+
+	</div>
+</div>
+<div id="body" tabIndex="0">
+<p>利用環境資訊及騎乘數據進行自行車檔位預測 研究生：何承學指導教授：林惠勇博士 Student: Cheng-Hsueh Ho Advisor: Huei-Yung Lin, Ph.D. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 5 in source list: https://max.book118.com/html/2017/0731/125442717.shtm"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3785744740&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">國立中正大學工學院電機工程研究所碩士論文 A Thesis Submitted to Institute of Electrical Engineering College of Engineering National Chung Cheng University in Partial Fulfillment of the Requirements for the Degree of Master in Electrical Engineering July</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2021 Chiayi, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 5 in source list: https://max.book118.com/html/2017/0731/125442717.shtm"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3785744740&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">Taiwan, Republic of China 誌謝 兩年</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">的<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 5 in source list: https://max.book118.com/html/2017/0731/125442717.shtm"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3785744740&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">研究所</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 35 in source list: http://ir.lib.ksu.edu.tw/bitstream/987654321/580/1/å°é¡è£½ä½.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=556042507&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#866712" class="#866712">生活，說長不長說短不短。這</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">兩年間林惠勇教授作為我們的指導教授，總是盡心盡力的指導我們研究的方向，遇到困難時也會適當的給予指引與建議，並且透過每個禮拜的定期會議了解我們的研究進展與方向，適時地提供我們建議讓我們的研究較為順利。因此很感謝林惠勇教授能夠作為我研究所時期的指導老師。 另外也很感謝實驗室的同學，兩年的過程中一起修習許多的課程，期間不乏互相討論作業與報告，特別在報告的製作上同學給予了我許多的建議。遇到困難時不僅會互相加油打氣，還能適當的協助，所以每個人都是在研究所期間不可缺少的夥伴。 最後<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 32 in source list: http://www.pmsuccess.com.tw/detail_scholarship.asp?M_id=110030&CLAid=C20120330398&category=1"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3221508351&n=1394&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">感謝家人在這段時間的支持，讓我</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">在這段期間可以專心的處理學業與研究上的問題。 i <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 42 in source list: http://etds.lib.ncku.edu.tw/etdservice/detail?n=9&etdun1=U0026-0812200913550172&etdun2=U0026-0812200911581270&etdun3=U0026-0812200912073889&etdun4=U0026-0812200911514630&etdun5=U0026-0812200911520365&etdun6=U0026-0812200911542549&etdun7=U0026-0812200911545305&etdun8=U0026-0812200911582795&etdun9=U0026-0812200912131893"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=1949835831&n=2474&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">摘要 本篇論文主要的目的是</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">透過獲取騎乘者的生理訊息，與當下的環境資訊，選擇一個合適的檔位讓騎乘者可以順利地騎乘，不必顧慮檔位的切換問題。腳踏車平台我們使用先前建立的智慧自行車系統作為原型，該系統是一個可以即時的收集騎乘者生理狀態與當下環境狀態的一個平台。並且選擇了幾種不同的決策方式對收集到的資料進行預測，透過收集到的感測器資訊對當下適合的檔位進行預測分析。由於有使用深度學習方面的方法，需要一定數量的資料用於進行訓練。我們使用先前建立的收集騎乘者生理資訊與環境資料的腳踏車系統，將該系統稍加調整後，利用該系統收集騎乘者當下的多個感測器訊息，還有當下的檔位狀態。使用這些資料對我們所建立的機器學習方法進行訓練，最後透過一部分不包含在訓練資料內的資料對訓練後的結果進行測試。另外我們建立了一個網頁平台可以用於管理收集到的資料，該平台可以用於資料的上傳、查詢，還有簡單的分析結果可供查看。 ii <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 25 in source list: http://docplayer.com.br/41866861-O-biodiesel-e-sua-relacao-com-a-incorporacao-de-novas-areas-e-producao-de-soja-no-parana.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=267859321&n=3791&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">Abstract The main purpose of this paper is to</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> obtain <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 25 in source list: http://docplayer.com.br/41866861-O-biodiesel-e-sua-relacao-com-a-incorporacao-de-novas-areas-e-producao-de-soja-no-parana.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=267859321&n=3791&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> physiological information of <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 25 in source list: http://docplayer.com.br/41866861-O-biodiesel-e-sua-relacao-com-a-incorporacao-de-novas-areas-e-producao-de-soja-no-parana.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=267859321&n=3791&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> rider, and <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 25 in source list: http://docplayer.com.br/41866861-O-biodiesel-e-sua-relacao-com-a-incorporacao-de-novas-areas-e-producao-de-soja-no-parana.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=267859321&n=3791&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> current environmental information, and select a suitable gear so that the rider can ride smoothly without worrying about the prob- lem of gear switching. Bicycle platform We use the previously established smart bicycle system as a prototype, which is a platform that can collect the physiological state of the rider and the current environmental state in real time. And choose several different decision-making methods to predict the collected data, and use the collected sensor information to predict and analyze the current suitable gear. Due to the use of deep learning methods, a certain amount of data is required for training. We use the previously established bicycle system that collects the physiological information and environmen- tal data of the rider. After slightly adjusting the system, we use the system to collect the current multiple sensor information of the rider, as well as the current gear status. Use these data to train the machine learning method we have established, and finally test the results after training with some <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 45 in source list: https://patents.google.com/patent/KR100679173B1/en"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=2052039288&n=3265&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#B64B01" class="#B64B01">data that is not included in the training</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> data. In addition, we have established a web platform that <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 44 in source list: https://opus.hs-offenburg.de/export/index/ris/searchtype/all"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=804307562&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">can be used to</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> manage <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 44 in source list: https://opus.hs-offenburg.de/export/index/ris/searchtype/all"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=804307562&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">the collected data. The</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> platform <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Burkart, Nadia, Huber, Marco F.. "A Survey on the Explainability of Supervised Machine Learning", 'AI Access Foundation', 2020"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=220728068&n=3793&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">can be used for data</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> upload, query, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Burkart, Nadia, Huber, Marco F.. "A Survey on the Explainability of Supervised Machine Learning", 'AI Access Foundation', 2020"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=220728068&n=3793&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> simple analysis results for viewing. iii 目錄 誌謝 摘要 Abstract 1 緒論 2 3 4 1.1 1.2 1.3 研究動機..................................相關研究文獻...............................研究架構與方法.............................. 硬體系統 2.1硬體回顧.................................. 2.2硬體調整.................................. 2.2.1 溫度感測器. . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.2 速度感測方法調整. . . . . . . . . . . . . . . . . . . . . . . . 2.3 系統流程與架構.............................. 檔位分析系統與雲端建置 3.1資料分析與檔位預測. . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.1 Deep Forest . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.2 XGBoost、LightGBM、CATBoost . . . . . . . . . . . . . . . . 3.1.3神經網路. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.4加入圖資進行判斷. . . . . . . . . . . . . . . . . . . . . . . . 3.2雲端建置與網頁架設. . . . . . . . . . . . . . . . . . . . . . . . . . . 資料收集與實驗結果 4.1訓練資料收集............................... 4.1.1資料前處理............................ 4.1.2校內資料集............................ 4.1.3校外資料集............................ 4.2 感測器有效性測試............................. 4.2.1壓力感測器............................ 4.2.2速度................................ 4.2.3 IMU................................. 4.2.4 GPS................................. iv <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 31 in source list: http://www.ift.ulaval.ca/~desharnais/Recherche/Theses/memoire.Andre.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3908627447&n=0&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">i ii iii 1 1 2 3 5 5</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> 6 7 8 <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 31 in source list: http://www.ift.ulaval.ca/~desharnais/Recherche/Theses/memoire.Andre.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3908627447&n=0&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">8</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> 15 15 16 17 19 23 23 29 29 30 32 34 35 35 36 37 39 4.3 測試..................................... 4.3.1神經網路. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.3.2 Random Forests . . . . . . . . . . . . . . . . . . . . . . . . . . 4.3.3 Deep Forest . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.3.4 XGBoost . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.3.5 LightGBM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.3.6 CATBoost . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.3.7討論. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 結論與未來工作 參考文獻 42 42 48 52 55 59 60 62 65 67 v 圖目錄 1.1簡易流程圖. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1 2.2 2.3 2.4腳踏車實體圖. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .伺服馬達安裝方式. . . . . . . . . . . . . . . . . . . . . . . . . . . . .熱敏電阻. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .系統完整流程圖，系統檢測完網路狀態後，收集各種感測資訊，傳遞至樹梅派進行檔位判斷，最後資料依據網路狀態選擇儲存方式。 . 2.5 2.6 2.7收集訓練資料流程圖. . . . . . . . . . . . . . . . . . . . . . . . . . .測試流程圖. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .架構圖. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1 3.2 3.3 3.4 3.5 Cascade Forest Structure . . . . . . . . . . . . . . . . . . . . . . . . . . Multi-Grained Scanning . . . . . . . . . . . . . . . . . . . . . . . . . . DeepForest訓練時不考慮前次檔位的訊息. . . . . . . . . . . . . . . . XGBoost訓練時不考慮前次檔位的訊息. . . . . . . . . . . . . . . . .兩階段訓練:第一階段訓練不考慮前次的檔位，第二階段使用第一階段預測結果作為前次檔位訊息進行訓練，並重複epoch次. . . . . 3.6 3.7 3.8 ANN . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ResNet building block. . . . . . . . . . . . . . . . . . . . . . . . . . . . NN Model:左半部分為訓練的流程圖，我們會使用每一個epoch的預測結果作為下一次訓練的前次檔位訊息。右半部分是對我們模型的架構圖，該架構使用了ANN、Unet、ResNet的部分架構內容，包含了ResNet的殘差架構、Unet的up sample與down sample。 . . 3.9 OpenStreetMap校內其中一個節點的示意圖，該節點有著crossing此重要的標籤資訊. . . . . . . . . . . . . . . . . . . . . . . . . . . . . vi 3 6 7 8 10 12 13 14 16 17 17 18 19 20 21 22 24 3.10 OpenStreetMap資訊在我們的資料中的表現形式(map inf)，map inf 為重要的標記點距離目前位置的平方差距離，若為1則是範圍內沒有重要的標記。 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.11網頁架構圖，資料的查詢、上傳只能在登入後執行，登入前僅可以 執行登入、註冊相關的操作. . . . . . . . . . . . . . . . . . . . . . . 3.12網頁首頁:包含實驗室基礎資訊. . . . . . . . . . . . . . . . . . . . . 3.13網頁資料查詢:可使用選單選擇日期、driver、時間並查詢符合設定 的資料. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.14網頁資料分析:點選查詢後即對資料進行簡易的分析(右上地圖)， 並畫出該時間段內所有資料的數值。 . . . . . . . . . . . . . . . . . . 3.15網頁資料上傳:選擇要上傳的csv檔案. . . . . . . . . . . . . . . . . . 4.1 raw data:左圖為Arduino的部分，右圖為RPI的部分。 . . . . . . . . 4.2資料的儲存形式. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.3校內訓練集. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.4校內訓練集. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.5校內訓練集. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.6校外訓練集. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.7校外訓練集. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.8校外訓練集全部包含的路線. . . . . . . . . . . . . . . . . . . . . . . 4.9校內只使用壓力感測器資訊進行預測. . . . . . . . . . . . . . . . . . 4.10校外只使用壓力感測器資訊進行預測. . . . . . . . . . . . . . . . . . 4.11校內只使用速度資訊進行預測. . . . . . . . . . . . . . . . . . . . . . 4.12校外只使用速度資訊進行預測. . . . . . . . . . . . . . . . . . . . . . 4.13校內只使用IMU資訊進行預測. . . . . . . . . . . . . . . . . . . . . . 4.14校外只使用IMU資訊進行預測. . . . . . . . . . . . . . . . . . . . . . 4.15校內使用壓力感測器+速度資訊進行預測. . . . . . . . . . . . . . . 4.16校外使用壓力感測器+速度+IMU資訊進行預測. . . . . . . . . . . 4.17校內只使用GPS進行預測. . . . . . . . . . . . . . . . . . . . . . . . 4.18校內不使用GPS進行預測. . . . . . . . . . . . . . . . . . . . . . . . vii 25 26 26 27 27 28 31 32 33 33 33 34 34 34 35 36 36 37 38 38 38 39 40 40 4.19校外只使用GPS進行預測. . . . . . . . . . . . . . . . . . . . . . . . 4.20校外不使用GPS進行預測. . . . . . . . . . . . . . . . . . . . . . . . 4.21校內測試資料. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.22 43000筆訓練資料，訓練2000個epoch . . . . . . . . . . . . . . . . . 4.23 53000筆訓練資料，訓練20000個epoch . . . . . . . . . . . . . . . . 4.24使用較少的隱藏層. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.25比較有沒有考慮前次檔位. . . . . . . . . . . . . . . . . . . . . . . . . 4.26比較有沒有考慮前次檔位的檔位差距. . . . . . . . . . . . . . . . . . 4.27校外測試資料. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.28比較有沒有考慮前次檔位(校外35000筆訓練資料) . . . . . . . . . . 4.29比較有沒有考慮past gear的gear gap(校外35000筆訓練資料) . . . . 4.30校內測試. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.31校外測試. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.32校內原始Random Forests . . . . . . . . . . . . . . . . . . . . . . . . . 4.33校內Random Forests加入前次檔位. . . . . . . . . . . . . . . . . . . 4.34校內Random Forests使用兩階段訓練. . . . . . . . . . . . . . . . . . 4.35校外原始Random Forests . . . . . . . . . . . . . . . . . . . . . . . . . 4.36校外Random Forests加入前次檔位. . . . . . . . . . . . . . . . . . . 4.37校外Random Forests使用兩階段訓練. . . . . . . . . . . . . . . . . . 4.38校內Random Forests使用所有訓練資料. . . . . . . . . . . . . . . . . 4.39校外Random Forests使用所有訓練資料. . . . . . . . . . . . . . . . . 4.40校內原始Deep Forest . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.41校內Deep Forest加入前次檔位. . . . . . . . . . . . . . . . . . . . . . 4.42校外原始Deep Forest . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.43校外Deep Forest加入前次檔位. . . . . . . . . . . . . . . . . . . . . . 4.44校內Deep Forest使用所有訓練資料. . . . . . . . . . . . . . . . . . . 4.45校外Deep Forest使用所有訓練資料. . . . . . . . . . . . . . . . . . . 4.46校內原始XGBoost . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.47校內XGBoost使用兩階段訓練. . . . . . . . . . . . . . . . . . . . . . 40 41 43 43 44 45 45 45 46 46 47 47 48 48 49 49 50 50 50 51 51 52 53 53 54 54 55 56 56 viii 4.48校外原始XGBoost . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.49校外XGBoost使用兩階段訓練. . . . . . . . . . . . . . . . . . . . . . 4.50校內XGBoost使用所有訓練資料. . . . . . . . . . . . . . . . . . . . 4.51校外XGBoost使用所有訓練資料. . . . . . . . . . . . . . . . . . . . 4.52 LightGBM校內測試. . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.53 LightGBM校外測試. . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.54 LGBM使用所有訓練資料測試. . . . . . . . . . . . . . . . . . . . . . 4.55 CATBoost校內測試. . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.56 CATBoost校外測試. . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.57 CATBoost使用所有訓練資料測試. . . . . . . . . . . . . . . . . . . . 4.58 LGBM校外使用少量訓練資料. . . . . . . . . . . . . . . . . . . . . . 57 57 58 58 59 59 60 61 61 62 64 ix 表目錄 4.1各個sensor採樣速率. . . . . . . . . . . . . . . . . . . . . . . . . . . 4.2各別感測器測試得分表1 . . . . . . . . . . . . . . . . . . . . . . . . . 4.3各別感測器測試得分表2 . . . . . . . . . . . . . . . . . . . . . . . . . 4.4 Random Forests Score List . . . . . . . . . . . . . . . . . . . . . . . . . 4.5 Deep Forest Score List . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.6 XGBoost Score List . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.7 LightGBM Score List . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.8 CATBoost Score List . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.9分數總表. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.10分數總表.................................. 4.11少量資料訓練............................... 4.12少量資料訓練............................... 30 41 41 52 55 58 60 62 63 63 64 64 x <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 21 in source list: http://www.admin.ltu.edu.tw:8000/Public/Upload/files/A008002.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3435059336&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">第一章緒論 1.1研究動機 隨著科技的進步</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">，為我們<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 21 in source list: http://www.admin.ltu.edu.tw:8000/Public/Upload/files/A008002.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3435059336&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">的</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">生活帶來<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 21 in source list: http://www.admin.ltu.edu.tw:8000/Public/Upload/files/A008002.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3435059336&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">了許多</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">方便<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 21 in source list: http://www.admin.ltu.edu.tw:8000/Public/Upload/files/A008002.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3435059336&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">的</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">地方，但是<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 39 in source list: http://www.sclq.org/solutions/20130523084557170.htm"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=402865258&n=2022&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#21785B" class="#21785B">對於環境的污染也是越來越嚴重，尤其是</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">汽車這類的交通工具，雖然近年來電動車有持續發展的趨勢，但是電力的來源仍然會對環境造成汙染。因此在適當的距離內騎乘腳踏車最為交通的方式不僅對環境友善，還能強身健體，騎乘腳踏車時檔位的變換無疑非常的影響整個騎乘的體驗，若是使用不適合的檔位進行騎乘，不僅會影響移動的速度，還有可能<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 36 in source list: http://nccur.lib.nccu.edu.tw/bitstream/140.119/34970/4/35501304.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3482576558&n=2209&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#63009c" class="#63009c">會對身體造成一定程度的傷害，因此</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">本篇論文提出了一個透過數個感測器收集生理資資訊，環境資訊等資料後，讓機器學習的方法來判斷現在騎乘者適合的檔位資訊，這樣不僅可以讓騎乘者不必分心去決定檔位，也可以讓騎乘者始終處於一個舒適的騎乘狀態。 本篇論文的硬體部分是使用[1]所建立的智慧自行車系統作為原型，加以調整後進行使用，該系統是一個可以即時的收集騎乘者生理狀態與當下環境狀態的一個平台，當時的系統也有對收集到的資料進行分析預測，但是因為著重在平台的建立，所以僅使用隨機森林的方式進行檔位的預測。 近年來基於機器學習做為決策手段的方法越來越多，可是在腳踏車的領域多數的資料集僅包含了起點終點還有對應的時間這些訊息，如果只有這些訊息顯然對我們的檔位預測的訓練並沒有太大的有效性。所以我們自己收集一個資料集，該資料集包含了騎乘者的生理資訊與當下的環境資訊，與當下的檔位資訊，以利於我們使用機器學習的方法進行訓練。 1 2 1.2相關研究文獻 1.2相關研究文獻 在已經發表的文獻中對於腳踏車變速的決策方式有，透過腳踏的頻率並且加入模糊理論的方法[2, 3]，也有使用腳踏頻率與輪子轉速的關係來進行決策的[4]，還有以腳踏的壓力與車速來估計出道路坡度，再結合車輛載重的方式來決定出電動車適合功率的方法[5]。和透過車速與曲柄的轉速來決定電動自行車升檔降檔的決策[6]。這些方法都是透過車子的速度，曲柄轉速等方式來估計出變換檔位的決策，或是馬達功率，但是這些方法都缺少對於騎乘者的生理資訊，與對於真實環境的坡度，和道路狀況的分析。在這部分我們選擇使用心律資訊、IMU坡度資訊還有圖資的資訊，結合了GPS、腳踏壓力、溫度感測、速度資訊來協助變換檔位的決策。 在[7]對於心跳與運動頻率耦合的研究中提到了在受試者在心情平穩的狀態下，進行週期性的運動，則受試者的心律與其運動(走路時的腳踏)的頻率呈現比例的關係。[8]提到在不同的自行車腳踏頻率下，隨著運動量的增加心律與運動的耦合程度就越高。從這兩篇論文中得知在騎乘者處於心情平靜的狀態下，心律的速度會與運動的頻率有直接的關聯。 而在[9]提到了雖然不少的競技自行車手在爬坡的環境中會以較低的踩踏頻率騎乘，但是研究[10]顯示上坡時較高的踩踏節奏可以提高騎乘的性能表現，對於在上坡的環境中騎乘自行車提高踩踏的頻率可以減少速度的波動與減少周圍肌肉的疲勞。因此本文使用[11]提供的IMU結合卡爾曼濾波器的方式，來估計出車體的傾斜狀態並且濾除雜訊，藉此做為調整檔位的部分參考依據。 本篇論文所使用的硬體平台為[1]所建立的智慧自行車系統，該系統有完整的資料收集系統，可以用於騎乘資料的收集，還有利用馬達建立的電子變速系統，可以用於檔位資訊ground turth資料的收集。 檔位決策的部分我們分別使用了Random Forests [12]、Deep Forest [13]、XG- Boost [14]、LightGBM [15]、CATBoost [16]，並且近年來使用神經網路來進行決策的方法很熱門，甚至[17]還特地將表格數據建成一張圖來實現表格數據的捲機神經網路，所以我們也使用神經網路的方法來進行檔位的決策，神經網路部分的方法是採用Artificial Neural Network [18]的方法作為主要的架構，結合了 3 1.3研究架構與方法 ResNet [19]的residual部分來增加模型的複雜度，使用UNet [20]的up sample和down sample的這種概念，讓較原始的資料可以更有影響力的加入後面的層。 使用Deep Forest是因為該方法是基於Random Forests並且加入了deep的概念，該方法不是唯一的deep tree的方法像是[21] [22]也都有提出深層的樹方法，但是Deep Forest是最符合我們的資料集且準確度較高的一個。 利用上述這些方法對收集的IMU、心律、腳踏壓力、溫度資訊、GPS等資訊，使用預先收集的資訊作為輸入而手動變換的檔位做為ground truth，訓練一個模型，用在即時對偵測的生理與環境資訊進行檔位的決策。 1.3研究架構與方法 本篇論分為五個主要的章節，第二章對使用的平台進行概略的介紹，並且說明收集資料的流程，最後對一些調整的地方進行說明。第三章會對檔位預測所使用的方法，與網頁的功能進行介紹。第四章會利用收集的資料前面提到的方法，分別對校內與校外的資料進行測試，並且測試一些關鍵因素對預測效果的影響。<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 29 in source list: http://libserver2.nhu.edu.tw/ETD-db/ETD-search/getfile?URN=etd-0115107-224300&filename=etd-0115107-224300.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=1972241399&n=2209&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#227967" class="#227967">第五章是本論文的最後一章</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">，這章中包含了結論，還有本篇論文的貢獻，並且對之後的研究方向提供建議。 RaspberryPi Use sensor Start Read data Collect GPS Regulate data and data data by time GPS to Send gear make decide Arduino Start Collect sensor data Send data Gear shift 圖1.1:簡易流程圖 圖1.1是基於[1]的系統流程圖。系統分成兩個部分RaspberryPi和Arduino的部分，Arduino主要是作為收集資料與控制檔位的平台，收集完資料後透過I2C傳遞給RaspberryPi，RaspberryPi再進行GPS的資料(位置與速度)收集。因為每個感 4 1.3研究架構與方法 測器資料獲取的時間不完全相同，透過內差的方式獲取同個時間點的所以感測器資料，利用決策方式對這些資訊決策出一個適合的檔位狀態再回傳給Arduino進行檔位的切換。另外我們架設了一個網頁用於資料的上傳、查詢與簡易的分析。網頁連結: https://vision.ee.ccu.edu.tw/intellibike/home.html 第二章硬體系統 這個章節會先回顧使用的硬體平台[1]的架構，並且對於調整增加的部分進行說明。接著對這個系統的運作流程除了檔位預測的部分進行介紹，包含了在收集訓練資料時、實際進行測試時，分別如何對資料進行收集。這部分先介紹一個理想上不考慮傳輸延遲與網路延遲後果的資料收集流程版本，該版本的優點是當有網路連線時會持續的<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 19 in source list: http://store.sony.com.tw/hi-res/hiresaudio.aspx"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=4208290397&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#21785B" class="#21785B">將資料上傳至雲端，因此</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">可以即時的對當下的狀態進行確認，但是這樣的作法<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 22 in source list: http://www.cjzdsb.com/xinwendongtai/detail/702.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3263369817&n=1394&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">會影響到整個</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">程式<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 22 in source list: http://www.cjzdsb.com/xinwendongtai/detail/702.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3263369817&n=1394&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">的運行效率</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">。我們改善運行<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 22 in source list: http://www.cjzdsb.com/xinwendongtai/detail/702.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3263369817&n=1394&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">效率</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">後分別介紹收集訓練資料的流程圖，與測試用的系統流程。 2.1硬體回顧 本章節對[1]的系統，還有本篇論文中增加與調整的部分進行介紹與說明。圖2.1是該系統的整體圖片。圖2.1紅框5的<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 52 in source list: http://www.seegot.cn/a/wangzhanlansan/peixun/898.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=2382168899&n=1840&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">部分是整個系統的核心，包含了</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">Arduino與RaspberryPi都安裝在那個位置，並且RTC時間模組、GPS模組、IMU模組、電子變速系統的換檔的按鈕開關，也是安裝在該平面上，Arduino作為主要的感測資訊收集還有馬達的控制，RaspberryPi則是作為資料分析的平台並且在必要時可以將資料上傳至資料庫。該系統的電子變速系統是透過馬達帶動的如圖2.1的紅框1所示，該電子變速系統是由圖2.2的方式所架設的，透過圖2.21 A的馬達帶動B的金屬搖臂，再帶動C的變速線來達到變速的效果，並且因為馬達需要額外的電流來驅動，所以使用了圖2.1紅框4、3兩個部分，並利用交流穩壓的方式為其提供足夠的電流來驅動馬達，圖2.1紅框4同時也是該系統的電力來源， 1圖片出自[1] 5 6 2.2硬體調整 這是一個可以提供交流與直流電的行動電源，並且有著53600mAH的大容量，讓該系統可以有一定時間的續航能力。圖2.1紅框2是該系統的壓力感測器，因為市面上的腳踏車壓力感測器價格不斐，該系統選擇使用將一個壓力感測器透過木頭結合束帶的方式將其固定在腳踏板上已達到類似的效果。圖2.1紅框7的部分是一個手指脈搏感測器，並且利用外在遮蔽元件來減少自然光對其的影響。最後圖2.1紅框6的部分是霍爾效應感測器，利用該感測器搭配一固定在輪子內側的磁條來對騎乘速度進行估計。 圖2.1:腳踏車實體圖 2.2硬體調整 在硬體回顧的章節中所介紹的系統已經很完整了，但是有些部分我們覺得仍然不是很完善，對該系統有進行一些些微的增加與調整，會在這個章節中進行介紹。 7 2.2硬體調整 圖2.2:伺服馬達安裝方式 2.2.1溫度感測器 我們認為溫度訊息也會一定程度的影響騎乘者的騎乘狀態，所以我們在該系統中加入了一個溫度感測器模組用於環境溫度的檢測。本篇論文選用的是Heat-Sensitive Temperature Switch Sensor Module w這個NTC的熱敏電阻溫度感測器(圖2.32)，原理是利用這種<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 38 in source list: http://www.coin-acceptor.com.cn/Upload/EditorFiles/technicalfile/ä¸æ¬¾åºäºGSMçèªå¨å®è´§æºæ çº¿çæ§ç³»ç»çå®ç°.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=2698292191&n=1840&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc0066" class="#cc0066">電阻其阻值會隨著溫度的改變</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">有明顯的變化的特性，用給定的輸入電壓來產生不同的電阻電壓，以此作為Arduino的類比輸入，利用類比訊號推算出當下的電阻值後，再經過公式(2.1)的的轉換將當下的溫度換算出來。<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 13 in source list: http://www.ntc-dz.net/ntcremindianzu/20120125/950.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=2213018745&n=1179&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#935F32" class="#935F32">Rt是熱敏電阻在T1溫度下的阻值，R是熱敏電阻在T2常溫下的阻值，B是熱敏電阻的參數</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">，但是藉由此公式換算出來的溫度是克爾文溫度(K)，透過公式(2.2)將其轉換成攝氏溫度。 Rt = R × e(B×( T11 − T12 )) (2.1) t = T 1 − 273.5 2圖片出自https://www.taiwaniot.com.tw/product/ (2.2) 2.3系統流程與架構 8 圖2.3:熱敏電阻 2.2.2速度感測方法調整 在速度感測的部分，原先是利用霍爾效應感測器搭配一固定在輪子內側的磁鐵實現的。但因為使用霍爾效應感測器來偵測速度的話，需要密集的在輪子旋轉時進行採樣，在此期間無法分心去對其他感測器進行採樣，又因為Arduino屬於單核心的平台，所以無法使用multi-thread的方式獨立一個核心進行採樣，導致占用整個Arduion太多計算量，使整體感測器的採樣頻率降低，並且出現空窗期，讓整個系統的採樣率不構平滑，進而導致收集的資料可信度不高。作為替代方案在收集訓練資料時速度資訊的部分使用GNSS同時會提供的速度資訊作為替代，以此減輕霍爾效應感測器對微控制器負荷。 2.3系統流程與架構 在這小節會對除了檔位分析與網頁以外的系統進行介紹，包含了在收集訓練資料時與進行測試時，如何對資料進行收集。這部分首先會介紹一個理想上不考慮傳輸延遲與網路延遲後果的資料收集流程版本，這個版本是基於[1]所提供的系統加上一些循環判斷後所產出的，該版本的優點是當有網路連線時會持續的<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 19 in source list: http://store.sony.com.tw/hi-res/hiresaudio.aspx"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=4208290397&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#21785B" class="#21785B">將資料上傳至雲端，因此</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">可以即時的對當下的狀態進行確認，但是這樣的作法<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 22 in source list: http://www.cjzdsb.com/xinwendongtai/detail/702.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3263369817&n=1394&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">會影響到整個系統的運行效率</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">。將其調整為較為有效率的狀態後分別介紹收集訓練資料的流程圖，還有測試用的系統流程。 這個系統分成兩個部分Arduino Mega 2560 R3與Raspberry Pi 3，這兩部分使用 2.3系統流程與架構 9 I2C來進行溝通與連接，Arduino因為其接口多，且支援多種的感測元件，所以選擇此開發板作為感測平台。而樹梅派因為其較優秀的運算能力，與自帶的WiFi模組，可以用來分析資料與將資料上傳到雲端。 具體而言Arduino用於收集大部分感測器的資料與控制馬達來達到換檔的功能，另外樹梅派用於將Arduino收集的感測器資訊傳送至雲端與分析資料，GPS因為每次重開機需要等待一段連接時間，也使用樹梅派來接收，這是因為樹梅派相比Arduino比較可控，不必花太多時間在連接GPS上。 圖2.4是本系統第一個版本的流程圖，做為一個較為理想狀態下的流程，該流程是在傳輸延遲與網路延遲不考慮的情況下建立的，並不符合我們的應用方向，因此後面會介紹我們如何讓整個流程更符合實際的應用情況。圖2.4一開始樹梅派會先判斷有沒有連接網路，若沒有Arduino會將收集到的資料儲存於SD卡中，並且透過I2C將資料傳送給樹梅派，透過GPS取得當下的圖資後，樹梅派使用預測模型與目前收集到的感測器資訊結合圖資的訊息，進行檔位的判斷，最後將判斷出的檔位透過I2C回傳給Arduino，讓Arduino控制馬達變換檔位。若是有連接網路的狀態下，Arduino會先將SD卡內的資料逐筆地透過I2C傳輸給樹梅派，藉此將離線的資料傳送至雲端資料庫，當離線資料上傳完畢，Arduino把收集到的資料透過I2C將資料傳送給樹梅派，透過GPS取得當下的圖資後，樹梅派使用預測模型與目前收集到的感測器資訊結合圖資的訊息，進行檔位的判斷，<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 51 in source list: http://www.fjdnzx.com/cn/1608/15470.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=753665724&n=3791&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">將這些資料上傳至雲端</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">資料庫，同時會儲存於本地端以避免資料在傳輸時發生了遺漏，最後將判斷出的檔位透過I2C回傳給Arduino，Arduino控制馬達變換到該檔位。並且因為考慮到移動時可能會有網路連接不穩定的狀況，加入了在蒐集完一整筆的資訊，做完決策後會判斷網路的連接狀況，以此來決定目前是屬於離線還是連線狀況。 圖2.4流程圖有著一些缺陷，第一點是為了經常對網路狀況進行確認，每收集了一整筆的資料就會對網路狀態進行確認。這種方法會因為這個確認的動作導致資料的收集出現了空窗期，同時會拉長了採樣的間隔，因此在後續的版本中考量了這種檢查的必要性後，決定去除這部分。 第二點是為了讓樹梅派進行資料的判斷與決策，需要將Arduino收集的資料透過I2C傳遞給樹梅派，因為感測器數量較多所以需傳遞的訊息量超出Arduino透 梅派進行檔位判斷，最後資料依據網路狀態選擇儲存方式。圖2.4:系統完整流程圖，系統檢測完網路狀態後，收集各種感測資訊，傳遞至樹RPI start Arduino start確認網路狀況確認RPI目前的連線狀況收到的資訊是否是否GPS資訊2.3系統流程與架構是否是否連接上網路是否連接上網路由rpi端進行GPS否接收，並且取代讀取Arduino傳arduino傳送的輸的目前資料，是是GPS資訊。並用來判斷適合的檔位與PC取得連接讀取SD卡內的由GPS結合圖資離線資料並傳輸訊息，來判斷是至RPI否需要改變決策由arduino將資料傳送離線資料已儲存於SD卡接收由Arduino傳輸的離上傳結束的訊息線資料，並確認離線資料將資料傳輸至是否上傳結束否PC端給RPI是是否收集到一整筆否是是資料了讀取arduino傳輸收到的資訊是否是接收各項感測器是否有觸發換檔的目前資料，並GPS資訊否的資料，並確認用來判斷適合的檔位資訊是否符的中斷副程式檔位合目前設定是是否連上網路確認檔位資訊是由RPI端進行將資料傳輸至由GPS結合圖資訊息，來判斷是GPS接收，並且否PC端否需要改變決策取代Arduino傳送的GPS資訊。將資料儲存於SD卡中是是否收集到一整筆否資料了是否收集到一整筆是資料了否 10 2.3系統流程與架構 11 過I2C一次可以傳遞的量，導致需要進行多次的傳輸，傳輸是必須確認收到才能進行下一次的傳輸，因此會花費較多的時間，會導致資料的收集出現了空窗期。該步驟在測試時顯然是必要的，但在收集訓練資料時並不是必要的，所以收集訓練資料時沒有保留這部分，另外將<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 40 in source list: https://www.techbang.com/posts/62863-2018-communication-contest-mediatek-technology-iot-development-competition-excellent-works"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=89824454&n=3793&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#336699" class="#336699">收集到的資料</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">即時<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 40 in source list: https://www.techbang.com/posts/62863-2018-communication-contest-mediatek-technology-iot-development-competition-excellent-works"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=89824454&n=3793&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#336699" class="#336699">上傳至雲端</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">資料庫的部分也因為相同的原因去除了。 第三點是Arduino這邊原本是採用逐個感測器獲取到資料後才收集下一個感測器的資料的方式進行的，該方法最大的問題是較難控制每個感測器的採樣頻率。並且我們是採用中斷的方式控制換檔的，原本使用的高頻率中斷對IMU進行採樣可能會因此產生中斷與中斷之間的衝突，這部分改為採取排程的方式來更有效率的運行。 圖2.5是本系統在收集資料時的流程圖，因為不需要利用感測器資料進行檔位判斷，沒有了將Arduino資料傳遞到樹梅派的部分，檔位切換的部分由按鈕代替，將這個檔位訊息作為ground turth，也將重複確認網路狀態的部分去除。感測器採樣的部分選擇使用protothread對每個感測器的採樣時間進行排程，這樣同時可以較輕易的控制採樣頻率，也可以將IMU的排程頻率提高來替代高頻率的中斷。 圖2.5流程Arduino會對感測器、馬達進行初始化設定，設定用於換檔的中斷副程式，使用protothread設定每個感測器的採樣順序與頻率，接著藉由設定好的排程讓系統運行，期間當中斷被觸發時根據按鈕決定檔位升降。樹梅派因為不用對Arduino的感測器資料進行資料分析，主要的工作是收集GPS的資訊，包含速度與位置資訊，會將GPS資訊讓樹梅派處理主要是因為GPS的連接需要時間而樹梅派比Arduino穩定不少，且比較可以透過SSH等方式進行無線控制，讓GPS由樹梅派進行連接，減少花費在等待GPS連接的時間。 圖2.6是測試階段的流程，測試階段需要在騎乘時根據感測器資料、GPS(包含速度與位置資訊)與圖資訊息進行及時的檔位判斷。這部分與圖2.5主要的差別在會將Arduino的資料透過I2C傳遞給樹梅派，還有Arduino原本使用按鈕進行手動換檔的部分，替換成在Arduino將感測器資料傳送出去後等待樹梅派的檔位判斷的回傳，進行檔位的切換。 圖2.7本系統的架構圖，此系統包含模組有腳踏壓力感測模組、陀螺儀、溫度感測器、心跳感測模組、GPS模組、SD卡模組及幫助溝通的I²C多路模組 2.3系統流程與架構 12 Arduino start RPI start check date Check date Sensor initialization Collect GPS Motor data initialization Collect speed data Motor change interrupt setup Save data locally by time Protothread setup Start protothread Sensor thread Motor change interrupt Require CPU Gear flag=0 Wait Collect sensor data Y Set gear flag Save data locally Gear variable change Release CPU Motor thread Require CPU Shift gears with a motor Wait Save data locally Clear gear flag Release CPU 圖2.5:收集訓練資料流程圖 2.3系統流程與架構 13 RPI start Read Arduino sensor data Collect GPS and OSM data Use sensor and GPS data to make decide Send gear data to arduino Arduino start Check date Sensor initialization Motor initialization Motor change interrupt setup Protothread setup Start protothread Sensor thread Require CPU Collect sensor data Wait Save data locally Release CPU Send thread Require CPU Wait Send data by I2C Read gear data Shift gears with a motor Release CPU 圖2.6:測試流程圖 2.3系統流程與架構 14 TCA9548A，以及變速核心伺服馬達，外部電源除了供應兩組開發板各5V的電源外，還需供應一6.6V電源使馬達做動，此伺服馬達在6.6V時具有最大扭力值20Kg-Cm。 Pressure SD card GPS: position and speed Heartbeat Sensor data Arduino I2C Raspberry Pi Gear IMU data Temperature Motor 圖2.7:架構圖 第三章檔位分析系統與雲端建置 本章節首先對本篇論文所使用的檔位預測方法進行介紹與說明，檔位預測的方法我們使用了包含Random Forests、Deep Forest、XGBoost、LightGBM、 CATBoost，與神經網路的方式進行決策。最後對我們所建立的雲端資料庫系統還有網站的功能進行說明與介紹。 3.1資料分析與檔位預測 檔位預測的方式我們選擇了包含Random Forests、Deep Forest、XGBoost、 LightGBM、CATBoost，還有神經網路這幾種方法。選擇Deep Forest主要的原因是因為Random Forests的方法在分類任務中依舊有一定程度的有效性，Deep Forest是基於Random Forests受到神經網路啟發的一種方式，神經網路的方法近年來<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 33 in source list: http://czkj.ci.cqvip.com/zk/search.aspx?key=K=[åé¢ååå°è®¡]"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3408348218&n=3791&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#935F32" class="#935F32">被廣泛的應用在各個領域中</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">，但是<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 33 in source list: http://czkj.ci.cqvip.com/zk/search.aspx?key=K=[åé¢ååå°è®¡]"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3408348218&n=3791&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#935F32" class="#935F32">在</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">表格形式的資料集中的表現並不突出，這個結合了Random Forests與神經網路的Deep Forest方法，是否可以有效地應用在我們的數據。而選擇XGBoost、LightGBM、CATBoost方法是因為在表格類型資料的分類任務中boosting tree一直是很廣為人知的有效方法，因此選擇了這些方法。而選擇神經網路的方法，則是因為前面有提到的在近年來神經網路一直是一個很受歡迎的研究方向，雖然在表格數據中一直沒有很突出表現，但是我們還是想了解神經網路在我們的資料中可以有者怎樣的表現。 輸入的特徵資訊包含了腳踏壓力、心律、IMU、環境溫度、GPS、移動速度，以上為一些基礎的訊息，另外加入地圖資訊，與前一個時間點的檔位，使用這兩種資訊結合基礎的感測器資訊一起用於檔位的預測。加入前次檔位訊息是因為只 15 3.1資料分析與檔位預測 16 使用即時的資訊對檔位進行決策會有著資料處於兩個檔位的中間值，導致該時間段內檔位會頻繁的變動，這種變換檔位的方式並不符合大眾的騎乘習慣。因此我們將前次的檔位加入判斷，使其學習到如何根據前次檔位與感測器資料進行檔位的切換，同時學到檔位變換並不會短時間內頻繁的發生。 3.1.1 Deep Forest Deep Forest是一個深層的隨機森林的架構，主要是在Random forest的基礎上加入了Cascade Forest Structure和Multi-Grained Scanning這兩個架構。Cascade Forest Structure的部分如圖3.11所示，在每一層中使用多個Random Forests來對原始資料進行分類預測，在下一層使用上一層的分類結果作為輸入繼續進行預測，直到收斂。這部分是受到神經網路有著多層的特徵的形式的啟發，產生了這種多層的結構。Multi-Grained Scanning的部分如圖3.22，是受到神經網路使用捲積得到不一樣特徵的方式的啟發，在每一層中使用多種side windows對特徵進行重建以產生不一樣的特徵的方法。 圖3.1: Cascade Forest Structure 使用該架構直接對我們的資料進行分析可以有一定程度的效果，但是原本的資料沒有考慮上一次的檔位狀態，預測的結果準確度雖然高，但是卻有頻繁變動檔位的狀況如圖3.3所示，這種狀況明顯不是一般人會有的騎乘習慣，因此加入了前次檔位作為輸入的其中一種資訊，若直接將前次檔位加入，會對前次檔位的依賴過高，導致檔位一直都不變化，<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 47 in source list: http://www.barrxxx.com/Article/wgrkzdzdlw.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3533990202&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#0270B6" class="#0270B6">這也不是我們想要的結果，所以</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">我們將除了前次檔位的檔位訊息的資訊量增加至前次檔位的好幾倍，以達到考慮前次檔位的資 1圖片出自Deep Forest [13] 2圖片出自Deep Forestt [13] 3.1資料分析與檔位預測 17 圖3.2: Multi-Grained Scanning訊，又不會過度依賴前次檔位的狀況。 圖3.3: DeepForest訓練時不考慮前次檔位的訊息 3.1.2 XGBoost、LightGBM、CATBoost XGBoost是一種Gradient Boosted Tree，使用樹狀的結構對每個樣本根據其特徵資訊得出對應於該類別的分數，並且利用多棵樹的結果產生最終的分數。 XGBoost使用了一些方式對其進行了優化，包含了分割方法採用預先設定好的分割點取代逐點進行測試，一種對每個節點默認方向的設計有效的處理特徵缺失的問題，並且透過將資料壓縮與分割的方式提高不能放入記憶體中的資料存取速度。 LightGBM同樣是一種Gradient Boosted Tree的方法，LightGBM使用GOSS、 EFB、Leaf-wise的生長策略對其進行優化，GOSS藉由捨棄部分梯度小的資料以 3.1資料分析與檔位預測 18 此節省所需的計算量，EFB透過將兩個稀疏且互斥的特徵資訊結合以減低所需的計算成本，Leaf-wise的生長策略使用了只對梯度大的節點取代了對所有節點都分裂的方式達到降低計算量的效果。使用上述這些方法LightGBM可以有效地提升整體的運行效率。 CATBoost利用特徵組合、對抗梯度偏差進行優化，特徵組合將不同的特徵相結合後做為新的特徵以強化分類性能，對抗梯度偏差來源於其他的方法對於梯度估計的方式都會對模型建立與梯度估計使用相同的資料，這會導致梯度的估計產生偏差，因此他們使用一種算法在建立模型時並不會使用到梯度估計資料，以此避免該問題。 與Deep Forest相同的狀況是，這些方法直接對我們的資料進行預測時準確度不低但是一樣有著高頻率的檔位變動如圖3.4所示，但是若直接加入前次檔位的訊息會像Deep Forest那樣產生過度的依賴。因此我們選擇使用兩階段預測的方式來進行訓練，如圖3.5所示會先使用不包含前次檔位的輸入資訊進行一次預測，出來的結果會如圖3.4所示有著高頻率的變動，若使用該資訊作為前次檔位因為不是真正的ground turth，較不易有過度依賴的問題，將預測出來的檔位依序作為前次檔位的訊息加入前一個時間點的輸入特徵中，以進行下一次的訓練，二階段的訓練中使用包含前次檔位的訊息來進行訓練，並重複第二階段一定次數後得到最終的結果。如此可以在考慮前次檔位的同時又不會對前次檔位產生過度的依賴。 圖3.4: XGBoost訓練時不考慮前次檔位的訊息 3.1資料分析與檔位預測 19 Input data Classification result First XGBoost F Second_input =input+F[i-1] Second_input False =input+S[i-1] If epoch-- != 0 Result=S True Second Classification result XGBoost S 圖3.5:兩階段訓練:第一階段訓練不考慮前次的檔位，第二階段使用第一階段預測結果作為前次檔位訊息進行訓練，並重複epoch次 3.1.3神經網路 神經網路預測方法主要是參考Artificial Neural Network，並參考ResNet與UNet的部分模型架構的方法。 使用Artificial Neural Network做為主要的基底，結合了ResNet與UNet的部分模型架構，必須有一些騎乘者實際騎乘狀態的檔位變換資料用於NN訓練的階段，透過訓練得到的模型可以讓騎乘者在不用特別進行換檔的動作，即時的隨著環境與身體狀態的改變，變換到騎乘者所習慣的檔位。 Artificial Neural Network顧名思義就是受人類大腦所啟發，由數個神經元互相連接用於處理訊息，ANN如圖3.6是由input layer作為訊號的輸入層，經過多個隱藏層(hidden layer)後得出一個最終的輸出結果output layer 。圖中連結每個神經元的線都會對應一個相對應的權重質值。訓練是該方法調整每個連接的權重的方式，透過訓練資料集內已知的期望輸出結果，最小化期望結果與真實輸出的誤差值，調整出可以得到最小誤差的對應每個連接的權重值。並且使用一個獨立於訓練資料集的驗證資料集，用於訓練後的驗證以確定訓練的效果，調整權重參數，驗證 3.1資料分析與檔位預測 20 結束後再用一個獨立於驗證資料集與訓練資料集的測試資料及來評估這個訓練結果的優劣。因為神經網路無法學習不存在訓練資料集內的特徵，訓練資料集必須包含足夠多的資料讓網路學習，並且不能包含太多不必要的細節，這會導致模型去擬和一些不重要的資訊。具體而言我們將各類感測器資訊作為輸入，使用線性層與ReLU對資料進行轉換，再使用全連接層將資料對應至每個類別中，並藉由分數的高低挑選出分類結果。 圖3.6: ANN 我們參考了ResNet的residual的部分，透過前一層的特徵來增加模型的複雜度，ResNet使用了一個殘差的架構如圖3.73所示，透過block形式將還沒經過該layer的處理的特徵，加入已經經過layer的特徵，用於下一層的layer運算，利用這種方式將較為原始的資料保留到後面的layer，藉此將每一層的輸入資料增加一些特徵，而不是單純的增加node數量。 為了考慮更多的前次檔位還有參考較原始的資訊，參考了UNet的down sample與up sample的部分，因為如果一直增加節點的數量，會使前次檔位訊息被漸漸的被稀釋掉，後半部分是採用up sample的方式。在前半部分逐步增加節點的數量，後半部分漸漸地減少節點的數量，並且將節點數量相同的部分連接起來，以達到參考原始的資訊的部分。 實作我們選擇使用Pytorch這個平台進行實現，透過將我們收集的8個感測器資訊讀取進架構內，經過一些隱藏層後，最終選擇出一個適合當下狀態的決策。圖3.8是神經網路的流程圖。因為預測時要考慮前一個檔位的狀態，一開始先把所 3圖片出自ResNet [19] 3.1資料分析與檔位預測 21 圖3.7: ResNet building block.有的前一個檔位都預設為3，將輸入資料加上N筆的前次檔位的訊息後進入第一層，將第一層的輸出與第一層的輸入再加上N筆的前次檔位的訊息後再進入第二層，同理將第二層的輸出與第二層的輸入再加上N筆的前次檔位的訊息後再進入第三層，在後半部分的層中加入了前半部分的特徵加以利用，在第二層和第六層加入dropout避免過擬合，透過full connection將結果塑造成6類的分類分數，最後softmax將結果正規化到0 1的範圍內。根據預測的結果，將所有的前次檔位改為前一個時間點的預測檔位。使用CrossEntropyLoss計算本次epoch的損失，進行反向傳播，最後透過SGD進行優化，以上為完整的epoch流程。 上述流程在每一層的輸入都有加入前次檔位的資訊，測試的結果證實了前次檔位的資訊對於預測結果的穩定性還有準確度方面有著重大的影響。參考了UNet的up sample和down sample的部分可以讓我們的網路架構在後面的層數中也可以有一定程度的去參考前次檔位訊息，較不會因為節點數量越來越多使的前次檔位的重要性在後面的層數中被稀釋掉。最後參考了ResNet的部分因為我們不希望模型的層數太深，但是又希望可以提高預測能力，所以加入了residual這個部分，讓<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 41 in source list: http://bbs.yncost.cn/archiver/showtopic-50681.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3415858220&n=2909&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">我們在層數不高的情況</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">下可以有一定程度的效果。 3.1資料分析與檔位預測 22 Load data Initialize past gear to 3 NN Change the past gear according to the prediction result Epoch finish CrossEntropyLoss SGD Input data : Latitude ,Longitude ,Speed ,Heartbeat ,Gyro ,Foot pressure ,Temperature Predict : Gear NN struct Input data N times past gear Layer1 Layer9 20 20 Layer2 Layer8 80 80 Layer3 Layer7 80 80 Layer4 Layer6 160 160 Layer5 160 Full connection Softmax Layer Linear ReLU BatchNorm1d 圖3.8: NN Model:左半部分為訓練的流程圖，我們會使用每一個epoch的預測結果作為下一次訓練的前次檔位訊息。右半部分是對我們模型的架構圖，該架構使用了ANN、Unet、ResNet的部分架構內容，包含了ResNet的殘差架構、Unet的up sample與down sample。 3.2雲端建置與網頁架設 23 3.1.4加入圖資進行判斷 利用前面提到的方式對收集到的生理與環境資訊，可以對大部分的狀況進行有效且合理的判斷，但是若處於人造的場景時會有一些坡度變化不明顯，生理上也沒有明顯的改變，可是因為路口或是交通號誌導致需要停車再行路段時，若處於較高的檔位可能會因此產生騎乘上的不舒服感。或是前方有橋梁時，若是使用前面提到的方式對收集到的感測器資訊進行判斷，要等到騎上橋才會開始進行換檔。上述這些狀況利用圖資的訊息提前進行判斷，就可以有效的使騎乘者有更好的騎乘體驗。 我們採用OpenStreetMap此免費的地圖資訊作為參考的依據。實作是透過查詢目前的經緯度資訊，確定周圍使否有會影響對決策的重要標記，將其記錄下來作為訓練時的其中一個參考依據。目前考慮的影響對決策的重要標記僅包含了highway : crossing 。圖3.94是含有crossing標記的節點，圖3.10最右邊的map inf是這類型資料在整個資料內的形式，1代表50公尺內沒有這些標記，其餘的值代表現在位置與該標記經緯度的平方差值。 3.2雲端建置與網頁架設 網頁的建置在[1]架設的網頁的基礎上進行完善，資料庫使用MySQL平台，網頁的模板為HTML5 UP所提供5，主要的功能有管理者的登入、騎乘資訊的查詢、資料登錄、資料分析這幾個部分，且管理者可以查詢多個騎乘者的狀況。網頁連結:https://vision.ee.ccu.edu.tw/intellibike/home.html 架構如圖3.11所示，主要分為登入前與登入後兩個部分，登入前僅可察看首頁資訊，其他相關功能需要進行登入的動作後才可瀏覽操作，例如資料上傳、資料查詢、檔位分析等功能。 圖3.12是網頁的首頁，僅介紹了一些基礎的訊息，其餘的內容需要登入後方可使用，圖3.13是查詢資料的頁面，可透過日期、時間、騎乘者查找要確認的資料，圖3.14為查詢後並進行分析之結果，預測使用兩階段隨機森林，ground turth是騎乘時真正的檔位訊息，兩張<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 37 in source list: https://toutiao.io/posts/7u6na"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=2993947797&n=2909&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#A85503" class="#A85503">路線圖中不同的顏色代表了不同</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">的檔位。更下方的折 4圖片出自https://overpass-turbo.eu/ 5HTML5 UP網頁模板license : https://html5up.net/license 3.2雲端建置與網頁架設 24 圖3.9: OpenStreetMap校內其中一個節點的示意圖，該節點有著crossing此重要的標籤資訊 3.2雲端建置與網頁架設 25 圖3.10: OpenStreetMap資訊在我們的資料中的表現形式(map inf)，map inf為重要的標記點距離目前位置的平方差距離，若為1則是範圍內沒有重要的標記。 線圖是各個感測器對應的時間點所偵測到的讀值。圖3.13是<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 34 in source list: http://home.aimei.tw/space.php?uid=1&do=blog&id=834"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3562750092&n=943&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ce0031" class="#ce0031">資料上傳的頁面，選擇要</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">上<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 34 in source list: http://home.aimei.tw/space.php?uid=1&do=blog&id=834"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3562750092&n=943&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ce0031" class="#ce0031">傳</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">的檔案後點擊上傳按鈕，將所選的資料上傳至資料庫，並在下方顯示相關資訊。 3.2雲端建置與網頁架設 26 Home Menu1 Home Login Signup Logout Menu2 Home Data Upload Userinfo Logout 圖3.11:網頁架構圖，資料的查詢、上傳只能在登入後執行，登入前僅可以執行登入、註冊相關的操作 圖3.12:網頁首頁:包含實驗室基礎資訊 3.2雲端建置與網頁架設 27 圖3.13:網頁資料查詢:可使用選單選擇日期、driver、時間並查詢符合設定的資料 圖3.14:網頁資料分析:點選查詢後即對資料進行簡易的分析(右上地圖)，並畫出該時間段內所有資料的數值。 3.2雲端建置與網頁架設 28 圖3.15:網頁資料上傳:選擇要上傳的csv檔案 第四章資料收集與實驗結果 4.1訓練資料收集 因使用深度學習還有機器學習的方式作為決策手段，需要預先收集能夠用於訓練的騎乘習慣的資料集，在腳踏車領域的資料集多數只有包含起點終點的位置、對應的時間、騎乘者性別等等的較為固定且不即時的資料，只有這些資料對於即時的檔位判斷而言，顯然的缺少了許多關鍵的判斷依據，例如路面的傾斜度、騎乘者足部當下的負荷狀態、騎乘者當下的生理狀態、當下的環境因素等等的資訊，導致這些資料集並不適合用於我們想要應用的領域，因此我們自己收集了一個包含了我們認為比較重要且不會太影響騎乘體驗的特徵與環境資訊，資料集內包含了GPS位置資訊與對應的圖資訊息、車輛傾斜資訊、腳踏壓力資訊、速度資訊、心律資訊、溫度資訊、並且因為每個感測器獲取資料的時間不盡相同，同時把所有感測器收集到資料的時間記錄下來，訓練之前透過內差的方式讓每一筆資料的時間對齊，讓整個訓練的結果較為合理。 在資料集的部分大致上<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 28 in source list: http://goldenfung.blogspot.com/2009/05/10-1.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3582620102&n=3265&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#330099" class="#330099">可以分為校內與校外兩個部分，校</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">內的資料因為地形屬於較為規範的狀態，所以收集時會有一個固定規劃好的路線進行騎乘。校外因為較為開放所以騎乘時雖然還是會對路線有稍微規劃，但是並不會完全的依照事前規劃所行動，且騎乘習慣也與校內的狀態有些許的差異。因此實驗部分會對校內校外分別獨立訓練還有一起訓練的狀況進行比較。 29 4.1訓練資料收集 30 4.1.1資料前處理 這個章節主要會對感測器的採樣還有前處理進行介紹，表4.1為每個感測器的採樣速度，在arduino上的大部分的感測器都透過排程的方式讓採樣間隔都為300毫秒，壓力感測器則是為了避免採樣到不適合的訊息，讓其的採樣頻率比其他感測器快一倍，從中挑出比較適合的那一個，樹梅派的部分因為受限於GPS的採樣頻率所以速度和位置資訊都約為1.5秒一筆。Arduino原始資料的格式如圖4.1左側所示，包含了Arduino開機時的時間(Time) ，與每個感測器資料獲得時是系統開機後經過了幾毫秒，利用這兩個訊息得到每個感測器資訊獲得時的真實時間。 GPS原始資料如圖4.1右側所示，包含了速度資訊與當下的時間、和經緯度資訊與當下的時間。利用這些時間資訊，並且以第一個檔位資訊的時間為基準，每次增加300毫秒，內差出其他感測器在這些時間點的值。 我們希望換檔時的檔位變動不要太大(理想狀態為:一次只能加、減一個檔位)，當收集的資料一次變動超過一個檔位時，這種資料可能會直接地導致預測時檔位變動太大，這種情況我們認為是比較不符合人們的騎乘習慣。我們會在變動大於一個檔位時，利用內差將中間的檔位，與之對應的感測器資料加入其中。 每個感測器的值位在不同的範圍區間還有基準值也不相同，所以會對資料進行Z-Score的處理，讓資料跟資料之間的範圍不要差距過大，Z-Score是透過將每一筆資料先減去全部的平均值後，再除以標準差的方式將資料調整至正負五之間的一種正規化方式。 表4.1:各個sensor採樣速率 Pressure(腳踏壓力) 150ms 1筆Heartbeat 300ms 1筆Temperature(環境溫度) 300ms 1筆Gear(檔位訊息) 300ms 1筆GPS 1.5s 1筆速度(透過GPS) 1.5s 1筆 4.1訓練資料收集 31 圖4.1: raw data:左圖為Arduino的部分，右圖為RPI的部分。 4.1訓練資料收集 32 圖4.2:資料的儲存形式 4.1.2校內資料集 圖4.3 4.4 4.5為學校內主要收集資料的路線，因為是屬於較規範的路線，每個路線都收集了約10,000筆資料，總計收集50,000筆資料用來訓練，並且每個路線都有包含上坡下坡、平地這些不同的路況，有2個路線中有包含到重要的道路標記的位置。 4.1訓練資料收集 33 圖4.3:校內訓練集 圖4.4:校內訓練集 圖4.5:校內訓練集 4.1訓練資料收集 34 4.1.3校外資料集 圖4.6圖4.7在校外大致上的騎乘路線的部分，因為不會完全的依照事前規劃騎乘，並不能確定每個路線的資料多少筆。圖4.8是我們收集的校外資料集所包含的所有路線的狀況，總資料有約50,000筆進行訓練。 圖4.6:校外訓練集 圖4.7:校外訓練集 圖4.8:校外訓練集全部包含的路線 4.2感測器有效性測試 35 4.2感測器有效性測試 我們會針對一些我們認為影響較大的感測器，實施單獨使用該感測器，對各個感測器對整個預測的效果的影響作一個概略的評估。測試內容包含只使用腳踏壓力資訊、只使用速度資訊、只使用IMU資訊、只使用GPS資訊、不使用GPS資訊這幾種。我們使用的測試路線校內是圖4.21，校外的路線則是圖4.27所示。且因為XGBoost在我們的測試中有著較好的表現，因此本章節皆使用相同的XGBoost進行測試比較。 對於優劣的評斷我們將相同時間下預測結果與ground turth圖像化繪製出來，如圖4.9所示，縱軸代表檔位，橫軸代表採樣的計數。 4.2.1壓力感測器 首先我們先觀察只使用壓力感測器來進行決策的狀況，可以從圖4.9圖4.10看到單獨使用壓力感測器的話雖然有些微的接近ground turth但是時常會有高頻率的在兩個檔位間的震盪，這種情形我推測應該是因為壓力感測的變化不夠明確，且在踩踏時並不會一直維持相同的力道才會導致這種比較不穩定的決策結果。所以在我們系統中的壓力感測器明顯的沒辦法獨立的對檔位進行預測，但是是可以對整體的預測有一定的貢獻。 圖4.9:校內只使用壓力感測器資訊進行預測 4.2感測器有效性測試 36 圖4.10:校外只使用壓力感測器資訊進行預測 4.2.2速度 單獨使用速度資訊的決策，可以看到圖4.11圖4.12中僅使用速度資訊的決策中，比起壓力感測器更加的接近ground turth的結果了，可是依然有一個明顯的缺點就是因為速度是需要一段時間才能看出變化的，所以圖4.11圖4.12中的決策都有有著一定程度的延遲產生。我認為這是因為當環境發生變化時速度需要一定的時間才會達到穩定的狀況，只使用速度資訊的判斷並沒辦法可以很即時的做出決策。 圖4.11:校內只使用速度資訊進行預測 4.2感測器有效性測試 37 圖4.12:校外只使用速度資訊進行預測 4.2.3 IMU 單獨使用IMU資訊的決策，這部分出乎意料的效果很差圖4.13圖4.14可以看到單獨使用IMU的狀況基本上是沒辦法產生有效的預測結果的，這部分我們猜測把IMU架設在腳踏車把手上可能是一個會使效果不佳的原因，因為把手的位置會時常的進行轉動，會有很多的雜訊產生，因此就產生了圖4.13圖4.14這種幾乎沒有預測效果的結果。 我們對使用速度和壓力感測器資訊的狀況，與使用速度、壓力和IMU資訊的狀況進行比較以確認IMU在與其他感測器結合的狀況下能不能有一定的貢獻。圖4.15是使用速度和壓力感測器資訊的狀況，圖4.16則是使用速度、壓力和IMU資訊的狀況，可以看到對比只使用速度與壓力的結果，加入了IMU的結果在整體上還有<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 50 in source list: http://www.cmtrshop.com/post/272.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=1097765567&n=3783&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#CB0099" class="#CB0099">準確度方面都有著比較好的</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">表現。因此可以得知雖然在單獨的情況下IMU並不能做出有效的預測，但是結合了其他的感測器後，IMU是可以為整體提供一些貢獻的。 4.2感測器有效性測試 38 圖4.13:校內只使用IMU資訊進行預測 圖4.14:校外只使用IMU資訊進行預測 圖4.15:校內使用壓力感測器+速度資訊進行預測 4.2感測器有效性測試 39 圖4.16:校外使用壓力感測器+速度+IMU資訊進行預測 4.2.4 GPS 我們對GPS的位置資訊對整個預測的影響進行探討，可以看到圖4.17和圖4.18這兩張圖，這兩張圖是在校園內的測試結果，因為校內的環境是屬於比較規範，且在坡度的變化是比較明顯的區域，在收集資料時常常在同一個地段就會很習慣地採取一樣的檔位來進行騎乘，因此這部分圖4.17顯示出了只使用GPS的位置資訊就可以對檔位的預測有一定的準確度。圖4.18部分是不使用GPS資訊進行預測的結果，可以看到雖然整體而言與ground turth有些相似，準確度方面並不理想，從這兩張圖可以看出GPS的資訊對於較為規範的場景而言是很必要的。 圖4.19和圖4.20這兩張圖，這是在校外測試的結果，這兩張圖在time:1000- 2500的部分是屬於長上坡與長下坡的道路型態，並且期間路況的起伏變化並不明顯，所以換檔時就比較需要依靠身體的感受去決定，所以在這部分圖4.19是只使用GPS進行預測的效果就不太理想，反而在圖4.20的部分因為有一些其他關生理感受的感測器資訊所以效果較只使用GPS的效果好。 <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 23 in source list: Submitted to Xiamen University on 2016-10-28"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:728230305&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">從圖4.17圖4.18圖4.19和圖4</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">.20可以看出來GPS在規範性高且場景變化明顯場所可以依靠機械性的判斷來得到很高的可靠性，但是騎乘者並不會完全像機器一樣到了某個路段就直接的感受到需要進行換檔，並且需要切換至哪個精確的檔位，這種狀況在一些場景變化較不明顯的環境中更為明顯，此時就需要其他的資訊來輔助決策。雖然GPS可以有效的規範出某些路段適合怎麼樣的檔位變化，但是還是需要其他的資訊一起進行決策才可以更加地符合騎乘者的騎乘習慣。 4.2感測器有效性測試 40 圖4.17:校內只使用GPS進行預測 圖4.18:校內不使用GPS進行預測 圖4.19:校外只使用GPS進行預測 4.2感測器有效性測試 41 圖4.20:校外不使用GPS進行預測 由本章節的實驗可得知，基本上所有的資訊都無法獨立的對檔位的預測產生全面性有效的結果，壓力感測器因為只放在一側的踏板上所以並不是相當的可靠。速度資訊因為速度的改變無法即時的反應環境的變化，因此會有延遲的現象。IMU因為架設位置的緣故會有不小的偏移干擾。GPS可以有效的規範出某些路段適合怎麼樣的檔位變化，但這是屬於比較制式化的規劃，無法反映出騎乘者當下的狀態，且在環境變化不明顯的路段效果更不理想。 表4.2表4.3為上述測試各自的得分，分數計算方式在4.3章會進行說明。可從表格中看到除了GPS外大部分的狀況下相比於使用單一資訊，使用越多的資訊整體的分數越高。其中不使用GPS的部分使用了除了GPS外所有的資訊，所以分數是僅次於只有使用GPS的狀況，比起其他使用單一資訊或是僅使用2、3種資訊的效果更好。 表4.2:各別感測器測試得分表1 GPS不使用GPS Speed Pressure IMU school 0.769 0.548 0.462 0.037 0.287 outside 0.236 0.437 0.4 0.163 0.329 表4.3:各別感測器測試得分表2 Pressure、Speed Pressure、Speed、IMU school 0.252 0.345 outside 0.282 0.383 4.3測試 42 4.3測試 測試階段我們會分成幾個小節對不同的方法分開進行測試，在每個章節中也會對不同的訓練環境分開進行測試，訓練的資料包含了只有校內資料的校內資料集、只有校外資料的校外資料集，還有包含校內和校外的全部資料，使用這三種狀況分別進行訓練，再對校內與校外的資料分別進行測試。 設計了一個適合我們應用情境的分數評估公式4.1，該標準我們設定為準確度減去變動分數osc與採樣數量sa的比值。因為我們並不希望檔位太過頻繁的切換，我們將變動分數設為負向的，其方法是使用大小為sl的滑動窗口由測試資料開始至結束進行掃描，當2秒內檔位G變動兩次以上，將變動次數µ累計下來並除以樣本數量。另外準確度是由ground turth與預測結果進行比較，兩者相同時進行計數，計算整體的比例。 另外有對預測的檔位與ground turth的差距從0到5(0代表預測的檔位與ground turth相同)，在整個測試資料中的占比進行統計，如圖4.26所示。 Score = Accuracy − osc/sa osc = n=sa−sl 0 µ < 2 ∑n=0 ⎨⎪µ µ ≥ 2 ⎧ (4.1) µ= m=n+sl−1 0 <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 43 in source list: http://export.arxiv.org/pdf/1902.03999"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=245268174&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">G[m] =⎩⎪G[m + 1</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">] m=n ⎪⎨<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 43 in source list: http://export.arxiv.org/pdf/1902.03999"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=245268174&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">1 G</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">[m] ≠ <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 43 in source list: http://export.arxiv.org/pdf/1902.03999"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=245268174&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">G</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">[m + 1] ⎧ ∑ ⎩ ⎪ 4.3.1神經網路 首先我們對使用神經網路的方法進行討論，圖4.21是我們用來進行校內測試的資料集，其範圍涵蓋了許多訓練資料中出現的場景。 使用校內資料進行訓練的部分，圖4.22和圖4.23，可以看到因為使用訓練集所沒有的路線進行測試所以當訓練的時間不夠長時會像圖4.22所示效果並不理想，而把訓練時間提高後就可以看到圖4.23所示，相較於圖4.22有了不少的改善。另外這部分的測試資料有包含了重要標記的訊息，圖4.22和圖4.23的紅色框部分就是經過此標記時，因為該標記而提早提升檔位，可以看到圖4.22和圖4.23都成功的學習 4.3測試 43 到該事件的發生。 圖4.21:校內測試資料 圖4.22: 43000筆訓練資料，訓練2000個epoch 4.3測試 44 圖4.23: 53000筆訓練資料，訓練20000個epoch 為了確認可以在不用那麼多的層數的情況下，就對這些訊息做出合理的檔位推斷，對比較少的層數的狀態分別測試了兩組不同的低層數的架構，圖4.24是兩種不同層數的預測結果，可以看到與較高層數的架構相比，雖然整體而言有一定的效果，但在比較細節的部分沒辦法成功進行預測。 為了了解加入前次檔位對我們整個架構可以得到哪一些影響，比較同樣的架構下有考慮前次檔位和沒有考慮前次檔位各自的預測狀況，圖4.25左圖是沒有考慮前次檔位的狀況，可以看到整個圖片中有許多很頻繁的震盪，圖4.25右圖是有考慮前次檔位的狀況，可以明顯的看出相比不考慮前次檔位的左圖，高頻率震盪有大幅度的減少了，從這<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 48 in source list: http://www.bethel-cnc.com/bethel/news/show_912.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3311268714&n=3265&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#330099" class="#330099">兩張圖中可以很明顯的看出</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">，在網路中加入前次檔位進行判斷，可以更加符合人類的騎乘習慣，使其較不會出現高頻率在兩個檔位中震盪的狀況。圖4.26所示，可以看到圖4.26的右圖中差距為1以內的數量佔了總測試資料的9成以上，且差距為3以上的資料在全部資料內的占比低於2%，圖4.26的左圖中差距為1以內的數量佔了總測試資料的8成左右，且差距為3以上的資料在全部資料內的占比約為1成。從圖4.26也可以看出在準確度方面有考慮前次檔位狀況相比不考慮前次檔位的狀況同樣是比較好的。 4.3測試 45 圖4.24:使用較少的隱藏層 圖4.25:比較有沒有考慮前次檔位 圖4.26:比較有沒有考慮前次檔位的檔位差距 圖4.27是我們用來進行測試的校外騎乘路線，該路線包含了上坡、下坡、平路，還有校內少有的長上坡路段，並且因為是比較郊區的路段，交通號誌較稀少，所以沒有考慮圖資訊息造成的影響。 4.3測試 46 圖4.28是以35000筆資訓練，並且分為有考慮past gear還有不考慮past gear的狀況，跟校內的情況相同，有考慮past gear的圖4.28右圖相比於圖4.28的左圖，在高頻率的變動情形有了明顯的改善。 圖4.29是圖4.28的狀況中預測的檔位與ground turth的差距，可以看到在圖4.29的右圖中差距在1以內的佔了92%，而在圖4.29的左圖中，差距在1以內的佔了84.8%。同樣還是有考慮past gear的準確度較高。 圖4.27:校外測試資料 圖4.28:比較有沒有考慮前次檔位(校外35000筆訓練資料) 4.3測試 47 圖4.29:比較有沒有考慮past gear的gear gap(校外35000筆訓練資料) 前面兩個部分的校內與校外資料的測試，是分別對這兩個部份去訓練後得出來測試結果，而接下來會對全部資料一起訓練的狀況進行探討。圖4.30是使用50000筆校內資料與50000筆校外資料訓練後，對校內的測試集測試結果，可以看到與圖4.26的右圖相比效果有變差的一點，這部份我們認為是因為校內的騎乘習慣與校外的騎乘習慣略有不同導致的，可以從圖4.30右圖中看到與圖4.26右圖相比誤差小於1的比例有略為的降低了2%左右，而在誤差大於3的部分則增加了5.3%。 圖4.30:校內測試 圖4.31是使用50000筆校內資料與50000筆校外資料訓練後，對校外的測試集測試結果，這部分比起圖4.29的右圖在誤差小於1的狀況下準確度雖然意外的有提升，但是在誤差為0的部分的準確度卻是低了不少，且與圖4.28右圖相比下還是圖4.28右圖的結果更為的穩定。 可以得知因為校內與校外的騎乘習慣略有不同，所以將兩種資料混合在一起進行訓練時，會對兩邊的預測結果產生一定程度不好的影響。 4.3測試 48 圖4.31:校外測試 4.3.2 Random Forests 使用[1]論文中使用的Random Forests方法進行測試。首先只有使用校內資料進行訓練的狀況，圖4.32為使用原始Random Forests的可視化結果，可以看到整體準確度不差，但檔位變換的頻率過高，這是因為沒有考慮前次檔位進行判斷的關係，因此圖4.33的部分我們加入了前次檔位的訊息一起進行決策，可以看到整體的檔位變動頻率降低了不少。圖4.34使用兩階段的方法加入前次檔位訊息，整體的變動頻率更低了一些。 圖4.32:校內原始Random Forests 4.3測試 49 圖4.33:校內Random Forests加入前次檔位 圖4.34:校內Random Forests使用兩階段訓練 校外資料集進行訓練的結果如圖4.35所示，原本的Random Forests的方法在檔位變動的頻率上極高，而在加入了前次檔位後圖4.36顯示出來的穩定度就提升了不少。且圖4.37使用兩階段方法整體呈現出更加穩定的效果。兩階段訓練是使用第一階段的預測結果作為第二階段訓練的前次檔位訊息，以此將前次檔位考慮進來。 4.3測試 50 圖4.35:校外原始Random Forests 圖4.36:校外Random Forests加入前次檔位 圖4.37:校外Random Forests使用兩階段訓練 4.3測試 51 使用所有的訓練資料一起進行訓練的<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 53 in source list: http://www.sss988.com.cn/post/530.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=2673111010&n=1274&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#935F32" class="#935F32">結果如圖4.38圖4.39所</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">示，所有資料一起進行訓練後，因為騎乘習慣的不同雖然資料量增加了許多，但是整體的提升效果卻很有限。 表4.4為RandomForests方法與不同的訓練資料分別獲得的分數，每一列分別代表使用校內資料訓練進行校內測試(school) 、使用校外資料訓練進行校外測試(outside) 、使用所有訓練資料訓練進行校內測試(all school) 、使用所有訓練資料訓練進行校外測試(all outside) 。可以明顯的看出考慮前次檔位對本論文的應用非常重要，不考慮前次檔位會因為檔位變更過於頻繁變動分數過高，使其最終的得分並不理想。考慮前次檔位的兩個方法中，兩階段方法在整體的權重分配上更加合理的，不會對於前次檔位過於依賴或欠缺考慮，整體而言是更有效的。 圖4.38:校內Random Forests使用所有訓練資料 圖4.39:校外Random Forests使用所有訓練資料 4.<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 24 in source list: Submitted to National Chengchi University on 2021-06-16"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2069378423&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">3測試 52</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> 表4.4: Random Forests Score List Regardless past gear consider past gear two step method school 0.578 0.721 0.727 outside 0.174 0.484 0.642 all school 0.651 0.713 0.747 all outside 0.064 0.524 0.687 4.3.3 Deep Forest 使用DeepForest對我們的資料進行分析，首先只使用校內資料進行訓練，圖4.40為使用原始的DeepForest方法，不考慮前次檔位進行測試，可以看到整體而言檔位的變動頻率過高並不符合人體的騎乘習慣，圖4.41加入了前次檔位的訊息，明顯的看到檔位變動頻率降低。 圖4.40:校內原始Deep Forest <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 24 in source list: Submitted to National Chengchi University on 2021-06-16"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2069378423&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">4.3測試 53</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> 圖4.41:校內Deep Forest加入前次檔位 圖4.42圖4.43為校外測試，圖4.42不考慮前次檔位，整體而言檔位變動頻率仍然過高，圖4.43加入了前次檔位的訊息，變動的頻率得到些微的改善。 圖4.42:校外原始Deep Forest <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 24 in source list: Submitted to National Chengchi University on 2021-06-16"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2069378423&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">4.3</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">測試 <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 24 in source list: Submitted to National Chengchi University on 2021-06-16"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2069378423&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">54</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> 圖4.43:校外Deep Forest加入前次檔位 圖4.42圖4.43為使用校內、校外訓練資料一起訓練的測試結果，因騎乘習慣並不相同，校內與校外測試都有些微的變差。表4.5為DeepForest全部測試所得的分數，可以看到加入了前次檔位訊息在幾乎所有的情況下都有較好的表現，所有資料一起訓練整體而言都得到較差的分數。由此可知加入前次檔位的訊息依就是有效的，另外騎乘習慣不同的資料一起訓練，會使整體的表現遜色一些。 圖4.44:校內Deep Forest使用所有訓練資料 <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 24 in source list: Submitted to National Chengchi University on 2021-06-16"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2069378423&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">4.3</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">測試 55 圖4.45:校外Deep Forest使用所有訓練資料 表4.5: Deep Forest Score List Regardless past gear consider past gear school 0.696 0.685 outside 0.247 0.456 all school 0.577 0.65 all outside 0.208 0.396 4.3.4 XGBoost 使用XGBoost對我們的資料集進行分析，首先只有使用校內資料進行訓練的部分，圖4.46是使用原始的XGBoost調整參數後的測試結果，可以看到XGBoost的方法本身在整體的預測結果上符合ground turth，但是在整個預測的過程中因為沒有考慮到前次檔位的訊息，整體的預測結果經常會有頻繁變動的狀況，為了改善這個狀況我們加入了兩階段的訓練方式在訓練中加入了前次檔位的<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 26 in source list: http://abook.cn/pdf/2331.0201.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3291029545&n=3722&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#630000" class="#630000">訊息，結果如圖4.47所示，從圖中可以</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">看到整體的穩定性提升了不少，幾乎沒有頻繁改變檔位的問題了。 4.3測試 56 圖4.46:校內原始XGBoost 圖4.47:校內XGBoost使用兩階段訓練 只使用校外資料集進行訓練的結果跟校內資料一樣的狀況圖4.48是使用原始的XGBoost的效果，有高頻率變換檔位的問題，而圖4.49是使用兩階段訓練的方式加入了前次檔位的訊息後整體的穩定就提升了不少。 4.3測試 57 圖4.48:校外原始XGBoost 圖4.49:校外XGBoost使用兩階段訓練 同時使用校內與校外的資料集進行訓練分別對校內與校外進行測試，圖4.50可以看到在加入了校外資料集一起訓練後，因為騎乘習慣的不同，相比於圖4.47而言準確度降低了不少。然後圖4.51也因為相同的原因整體的效果並不如圖4.49的效果好。 4.3測試 58 圖4.50:校內XGBoost使用所有訓練資料 圖4.51:校外XGBoost使用所有訓練資料 表4.6為所有XGBoost方法在測試中所獲得的分數，可以看到在不加入前次檔位訊息的情況下，整體的分數會因變動頻率過高，使的變動分數高導致分數並不理想，加入了前次檔位訊息有效的使變動頻率降低，因此分數也提高許多。另外使用騎乘習慣不同的資料同時訓練，一樣會導致整體的預測能力下降，無法對所有的狀況進行有效的預測。 表4.6: XGBoost Score List Regardless past gear two step method school 0.581 0.785 outside 0.296 0.669 all school 0.613 0.687 all outside 0.272 0.440 4.3測試 59 4.3.5 LightGBM 使用LGBM對我們的資料進行分析，首先是校內資料的部分，圖4.52(a)為原始的LGBM的預測結果，可以看到準確度有一定的水準，但是同樣有著變動率過高的問題。圖4.52(b)使用兩階段訓練的方式將前次的檔位訊息，整體的穩定性有著明顯的提升，並且預測準確度也有一定的水準。 (a)校內原始LightGBM (b)校內LightGBM使用兩階段訓練圖4.52: LightGBM校內測試 校外資料的部分，圖4.53(a)為原始的LGBM的預測結果，一樣有著高頻率檔位變動的問題，圖4.53(b)加入了兩階段訓練後整體的穩定度有了很大程度的改善了。 (a)校外原始LightGBM (b)校外LightGBM使用兩階段訓練圖4.53: LightGBM校外測試 圖4.54是使用所有的訓練資料訓練的效果，整體的效果有略為的提升了一些， 4.3測試 60 但是因為騎乘習慣的不同，所以即使增加了一倍的訓練資料，提升的幅度還是很有限。 (a)校內LightGBM使用所有訓練資料 (b)校外LightGBM使用所有訓練資料圖4.54: LGBM使用所有訓練資料測試 表4.7為LightGBM全部測試的分數，可以看到不使用兩階段訓練的方法因為變動頻率過高導致分數很低，而加入了兩階段的方法後因為變動頻率明顯下降了許多，因此分數也得到了大幅的提升。另外使用所有資料一起訓練的部分因為騎乘習慣的不同，所以分數僅有些微的提升。 表4.7: LightGBM Score List Regardless past gear two step method school 0.537 0.732 outside 0.023 0.361 all school 0.756 all outside 0.389 4.3.6 CATBoost 使用CATBoost對我們的資料進行測試，圖4.55(a)為使用原始的CATBoost測試的結果，可以看到相同的問題是檔位的變動頻率過高，而圖4.55(b)使用兩階段的方式加入了前次檔位訊息後，整體穩定度得到了明顯的改善 4.3測試 61 (a)校內原始CATBoost (b)校內CATBoost使用兩階段訓練圖4.55: CATBoost校內測試 圖4.56是校外資料使用CATBoost測試的效果，可以看到同樣的使用兩階段的方式，比起不使用的狀況整體的穩定度高了許多，對於檔位變動<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 46 in source list: http://www.anmose.com/html/skill-104658.html"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=1122917608&n=2474&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#630000" class="#630000">的問題有了很大程度的</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">改善。 (a)校外原始CATBoost (b)校外CATBoost使用兩階段訓練圖4.56: CATBoost校外測試 圖4.57為使用所有訓練資料分別對校內與校外資料測試的結果，可以看到因為資料量的增加，預測的效果有些微的提升，但是因為兩邊資料的騎乘習慣不同，所以提升的效果非常的有限。表4.8為CATBoost全部的分數，可以看到不考慮前次檔位的狀況，因為變動頻率過高，導致分數很低，而利用兩階段訓練的方式加入了前次檔位後，整體的分數提升了許多。使用全部資料訓練的部分因為騎乘習慣的不同，所以雖然分數有略微提高但是幅度很有限。 4.3測試 62 (a)校內CATBoost使用所有訓練資料 (b)校外CATBoost使用所有訓練資料圖4.57: CATBoost使用所有訓練資料測試 表4.8: CATBoost Score List Regardless past gear two step method school 0.597 0.808 outside 0.056 0.515 all school 0.8 all outside 0.558 4.3.7討論 由前面的實驗中可以得知在神經網路、Random Forests、Deep Forest、XG- Boost、LightGBM、CATBoost這些方法中，神經網路的方法與預期的一樣在表格數據集中的表現並不突出，剩下的幾種方法中在沒有考慮前次檔位的情況下，幾個方法的準確度差距並不大，加入了前次檔位後XGBoost、LightGBM、CAT- Boost、Random Forests得益於可以利用迭代的方式多次訓練得到了比DeepForest更加讓人滿意的效果，其中又以XGBoos、CATBoost這兩種方法的效果最好。將所有的資料加入一起訓練後，因為校內與校外資料騎乘習慣的不同，效果都比單獨訓練時遜色了一些，或是僅有些微的提升。 表4.9表4.10為所有方法測試得出的準確度，橫軸是使用的方法，縱軸是測試的資料集，ALL代表使用校內與校外一同訓練。從表中可以看出XGBoost與CATBoost有著最高的得分，因此我們認為Boosting Tree對於我們的資料集而言是很有效的。LightGBM雖然同樣是Boosting Tree的方法，但因為其輕量化的結 4.3測試 63 構，並且LightGBM [15]提到所測試的資料中與我們的資料差距很大，該論文中提到的資料集與特徵數量的大小比我們的大許多，因此我們認為該方法並不適合用於我們的資料。RandomForests仍然有不錯的準確度，但是略遜於XGBoost與CATBoost。而使用深度的隨機身林的DeepForest效果甚至比起RandomForests還差，因此我們認為我們的資料並不需要非常深的架構才能有效的預測。最後神經網路的方法仍然並不適合用於我們這種表格形式的資料集，比起使用神經網路，樹狀結構的方法明顯可以產生較好的結果。 表4.9:分數總表 XGB CATBoost LGBM RF school 0.785 0.808 0.732 0.727 ALLschool 0.687 0.800 0.756 0.746 outside 0.669 0.515 0.361 0.642 ALLoutside 0.44 0.558 0.389 0.688 表4.10:分數總表 DF NN school 0.685 0.61 ALLschool 0.65 0.586 outside 0.456 0.478 ALLoutside 0.396 0.481 為了瞭解我們現在的資料量是否充足，我們對Random Forests、XGBoost、 LightGBM、CATBoost這些效果較好的方法進行資料量較少的測試，分別是只有總資料3成的和只有總資料6成這兩種狀況。測得的<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 49 in source list: http://www.ccunix.ccu.edu.tw/~deptkmc/resource/resource_2.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3274090188&n=2209&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#227967" class="#227967">分數如表4.11表4.12所</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">示，第一列代表使用哪個方法並且使用了多的資料，XGB0.3代表使用XGBoost資料量為總資料的3成以此類堆。所有的方法我們都有使用兩階段訓練的方式將前次檔位的資訊考慮進去，且都是使用單獨的校內、校外訓練資料。 我們對一些比較特殊的狀況進行討論，XGB的部分可以看到校內只使用3成訓練資料就能產生不錯的結果，而在6成資料時順反而變低，我們測試其他相近比例(6.5、7)時卻都可以達到0.74左右的分數，因此我們認為是剛好在這個資料量時的訓練產生較差的結果。Random Forests校外測試同樣是6成資料的分數比起3成資料的分數好了一些，但是兩個分數都不高，因此我們認為應該是資料量還不足以讓Random Forests產生穩定預測導致的。LightGBM校外測試的部分與Random Forests的原因相似，兩個比例的分數都不高，但是因為3成資料的測試 4.3測試 64 結果幾乎不變動，且有一定量的ground turth與預設值相同，導致其分數較高，6成資料的訓練反而因為有略為的學習到一些資訊，會有一些檔位的切換，導致符合ground turth的狀況較少，如圖4.58所示。 由表4.11表4.12可以看到，校內3成資料的得分大部分是比6成資料的分數低，而6成資料的得分已經與全部資料的分數相差不大了，因此我們認為校內的資料量已經足夠充足可以應付校內環境的檔位的切換。而校外的資料雖然大部分6成資料的效果都較好，但是6成資料的得分依然與全部資料的分數有一些落差，因此我們認為校外的資料還需要一定量的增加才有辦法應付當前的環境。 表4.11:少量資料訓練 XGB0.3 XGB0.6 RF0.3 RF0.6 school 0.718 0.608 0.663 0.703 outside 0.305 0.39 0.453 0.386 表4.12:少量資料訓練 LGBM0.3 LGBM0.6 CATBoost0.3 CATBoost0.6 school 0.24 0.561 0.619 0.743 outside 0.26 0.076 0.25 0.569 (a)LGBM校外使用3成訓練資料(b)LGBM校外使用6成訓練資料圖4.58: LGBM校外使用少量訓練<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 27 in source list: http://ethesys.lib.cyut.edu.tw/ETD-db/ETD-search/getfile?URN=etd-0807108-123849&filename=etd-0807108-123849.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=2281173233&n=2209&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#0270B6" class="#0270B6">資料 第五章結論與未來工作 本篇</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">論文基於[1]建立的腳踏車騎乘者生理資訊、環境資訊收集，再加上電子變速系統，對其系統進行關於採樣頻率與系統穩定度方面的調整，並且利用調整後的平台對校內5條不同騎乘路線、與校外路線進行訓練資料的收集，另外收集了一筆校內、與校外的資料作為我們的測試路線。使用數個機器學習、深度學習的方法對該資料集進行自車檔位的預測，使用的方法包含了神經網路、RandomForests、DeepForest、XGBoost、LightGBM、CATBoost這幾個，並且對這些方法進行調整優化，對所有的結果進行分析與討論，最後我們認為神經網路的方法依舊無法有效的對表格類的資料實行有效的預測，其餘的方法中RandomForest、XGBoost、LightGBM、CATBoost得益於可以反覆進行學習因而得到了最令人滿意的效果，其中又以XGBoost與CATBoost的預測最為平順且符合測試資料的騎乘習慣。另外我們建立一個網頁平台，用於資料的儲存、查詢，與簡易的分析比較。供使用者了解自己的騎乘狀況，並確認該系統的預測與真實的狀況是否吻合。 本論文的主要貢獻如下: 1.調整先前建立平台的資料收集頻率，從1分鐘5-6筆(約10-15秒一筆)，提升至1秒3筆資料。 2.收集建立了一個包含踩踏壓力、IMU、心率、車速、時間、GPS座標資訊、環境溫度、圖資，當下檔位狀態的資料集。該資料集包含了約100,00筆訓練資料，各2000筆校內、校外測試資料。 3.使用多種方法對該數據集進行分析，並探討這些方法對於我們資料集的實用65 66 性。 4.建立一種兩階段的訓練方法，對時序相關資料進行參考。 5.建立一可供使用者管理並查詢騎乘狀況的網頁平台。未來可改善的方向，首先從我們的實驗中看到校外的資料尚未達到飽和還有一些提升的空間，因此可以先著手於校外資料集的增加，資料增加的方式可以使用收集資料的方式，或是最近有提出的GAN的方法對我們的資料集進實施增強。另外目前的實驗都是在個人電腦上(PC)運行的，可將預測階段移植到樹梅派上實行真正的即時預測與換檔。最後希望可以透過更換平台或是其他方式改善傳輸延遲的問題即時將資料上傳。 參考文獻 [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 11 in source list: https://vision.ee.ccu.edu.tw/hueiyung/"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=746339621&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">1] Z.-Y. Wu and H.-Y. Lin, “Intellibike: An intelligent bicycle with automatic shifting based on sensing and riding</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> analysis,” in <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 11 in source list: https://vision.ee.ccu.edu.tw/hueiyung/"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=746339621&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">2020 IEEE/SICE International Symposium on System Integration (SII</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">), 2020, pp. 731–736. [2]蔡岳良,<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 7 in source list: https://ctimes.com.tw/DispArt-cn.asp?k=æºæ§è®æª/è¸è¼ªè¸æ¡¿è®éæ©æ§/çç¾¤/èªè¡è»&o=1711141557XA"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=602698171&n=3783&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#0270B6" class="#0270B6">自行車自動變速策略之研究.國立交通大學</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">機械工程<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 7 in source list: https://ctimes.com.tw/DispArt-cn.asp?k=æºæ§è®æª/è¸è¼ªè¸æ¡¿è®éæ©æ§/çç¾¤/èªè¡è»&o=1711141557XA"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=602698171&n=3783&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#0270B6" class="#0270B6">系所</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2007. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 7 in source list: https://ctimes.com.tw/DispArt-cn.asp?k=æºæ§è®æª/è¸è¼ªè¸æ¡¿è®éæ©æ§/çç¾¤/èªè¡è»&o=1711141557XA"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=602698171&n=3783&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#0270B6" class="#0270B6">3]張峻逢,以模糊理論實現一個具有學習功能的自動變速腳踏車系統. 國立交通大學電控工程研究所</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2011. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Vladimir Dimitrov. "Overview of the Ways to Design an Electric Bicycle", 2018 IX National Conference with International Participation (ELECTRONICA), 2018"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=610298947&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#CB0099" class="#CB0099">4] P. Tandon, A. Awasthi, B. K. Mishra, P. Rathore, and R. K. Shukla, “Design and simulation of an intelligent bicycle transmission system,” IEEE</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">/ASME Transactions <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Vladimir Dimitrov. "Overview of the Ways to Design an Electric Bicycle", 2018 IX National Conference with International Participation (ELECTRONICA), 2018"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=610298947&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#CB0099" class="#CB0099">on Mechatronics, vol. 16, no. 3, pp. 509–517</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2011. [5] Z. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Vladimir Dimitrov. "Overview of the Ways to Design an Electric Bicycle", 2018 IX National Conference with International Participation (ELECTRONICA), 2018"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=610298947&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#CB0099" class="#CB0099">Kai</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> and Y. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 17 in source list: Submitted to University of Birmingham  on 2017-12-20"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:2:80500421&n=2&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#A85503" class="#A85503">Dejun, “A control approach adaptive to load and road slope for electric power assisted bicycle</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">,” in Proceedings of <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 17 in source list: Submitted to University of Birmingham  on 2017-12-20"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:2:80500421&n=2&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#A85503" class="#A85503">the 2017 36th</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Chinese Control Confer- ence (CCC), IEEE, 2017, pp. 3414–3418. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 7 in source list: https://ctimes.com.tw/DispArt-cn.asp?k=æºæ§è®æª/è¸è¼ªè¸æ¡¿è®éæ©æ§/çç¾¤/èªè¡è»&o=1711141557XA"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=602698171&n=3783&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#0270B6" class="#0270B6">6]曾俊諺,電動腳踏車之自動變速</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">系統. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 7 in source list: https://ctimes.com.tw/DispArt-cn.asp?k=æºæ§è®æª/è¸è¼ªè¸æ¡¿è®éæ©æ§/çç¾¤/èªè¡è»&o=1711141557XA"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=602698171&n=3783&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#0270B6" class="#0270B6">國立成功大學機械工程學系碩博士班</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2013. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 15 in source list: R. Lee Kirby. "The Cardiac-Locomotor Coupling Phenomenon: The Contribution of Coleman", Perceptual and Motor Skills, 2016"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=580945370&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#866712" class="#866712">7] W</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">. M. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 15 in source list: R. Lee Kirby. "The Cardiac-Locomotor Coupling Phenomenon: The Contribution of Coleman", Perceptual and Motor Skills, 2016"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=580945370&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#866712" class="#866712">Coleman, “On the correlation of the rate of heart beat, breathing, bodily move- ment and sensory</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> stimuli,” <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 15 in source list: R. Lee Kirby. "The Cardiac-Locomotor Coupling Phenomenon: The Contribution of Coleman", Perceptual and Motor Skills, 2016"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=580945370&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#866712" class="#866712">The Journal of</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> physiology, vol. 54, no. 4, p. 213, 1920. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 8 in source list: http://jultika.oulu.fi/files/nbnfi-fe2019091628303.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=481565949&n=3783&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#330099" class="#330099">8] G. Blain, O. Meste, A. Blain, and S. Bermon, “Time-frequency analysis of heart rate variability reveals cardiolocomotor coupling during dynamic cycling exercise in humans,” American Journal of Physiology-Heart and Circulatory Physiology, vol. 296, no. 5, pp. H1651–H1659</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2009. 67 68 參考文獻 [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 6 in source list: Submitted to Loughborough University   on 2019-08-30"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:2:605967786&n=2&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#630000" class="#630000">9] W. Bertucci, F. Grappe, A. Girard, A. Betik, and J. D. Rouillon, “Effects on the crank torque profile when changing pedalling cadence in level ground and uphill road cycling,” Journal of biomechanics, vol. 38, no. 5, pp. 1003–1010</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2005. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 6 in source list: Submitted to Loughborough University   on 2019-08-30"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:2:605967786&n=2&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#630000" class="#630000">10</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">] <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 9 in source list: Takuhiro Sato, Riki Kurematsu, Tatsushi Tokuyasu. "両下肢の筋シナジーに基づいたペダリング技術の熟練度評価の試み", IEEJ Transactions on Electronics, Information and Systems, 2019"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=641508665&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#227967" class="#227967">R. P. Patterson and M. I. Moreno, “Bicycle pedalling forces as a function of pedalling rate and power output.” Medicine and science in sports and exercise, vol. 22, no. 4, pp. 512–516</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 1990. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 9 in source list: Takuhiro Sato, Riki Kurematsu, Tatsushi Tokuyasu. "両下肢の筋シナジーに基づいたペダリング技術の熟練度評価の試み", IEEJ Transactions on Electronics, Information and Systems, 2019"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=641508665&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#227967" class="#227967">11</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">] <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 14 in source list: https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20200001546.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=294592896&n=3788&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ce0031" class="#ce0031">R. E. Kalman, “A new approach to linear filtering and prediction problems,” Journal of Basic Engineering, vol. 82, no. 1, pp. 35–45</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 1960. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 14 in source list: https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20200001546.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=294592896&n=3788&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ce0031" class="#ce0031">12</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">] <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 20 in source list: http://uu.diva-portal.org/smash/get/diva2:1033169/FULLTEXT01.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=1941321800&n=2909&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#336699" class="#336699">L. Breiman, “Random forests,” Machine learning, vol. 45, no. 1, pp. 5–32, 2001</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">. [13] <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 20 in source list: http://uu.diva-portal.org/smash/get/diva2:1033169/FULLTEXT01.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=1941321800&n=2909&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#336699" class="#336699">Z</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">.-H. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 20 in source list: http://uu.diva-portal.org/smash/get/diva2:1033169/FULLTEXT01.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=1941321800&n=2909&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#336699" class="#336699">Zhou</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 30 in source list: https://papers.neurips.cc/paper/2020/file/b86e8d03fe992d1b0e19656875ee557c-Paper.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=686703764&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#CB0099" class="#CB0099">and J. Feng, “Deep forest,” arXiv preprint arXiv:1702.08835</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2017. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">14] T. Chen and C. Guestrin, “Xgboost: A scalable tree boosting system,” in Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> mining, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">2016, pp. 785</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">–794. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">15] G. Ke, Q. Meng, T. Finley, T. Wang, W. Chen, W. Ma, Q. Ye, and T.-Y</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">. Liu, “Light- <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">gbm: A highly efficient gradient boosting decision</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> tree,” <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">Advances in</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> neural infor- <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">mation processing</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> systems, vol. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">30, pp. 3146–3154</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2017. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">16] A. V. Dorogush, V. Ershov, and A. Gulin, “Catboost: gradient boosting</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> with cate- <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: https://scholarspace.manoa.hawaii.edu/bitstream/10125/71035/1/0340.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=695661461&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">gorical features support,” arXiv preprint arXiv:1810.11363</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2018. [17] B. Sun, L. Yang, W. Zhang, M. Lin, P. Dong, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: Submitted to Cornell University on 2021-03-31"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2003834744&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">C. Young</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, and <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: Submitted to Cornell University on 2021-03-31"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2003834744&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">J. Dong, “Supertml: Two-dimensional word embedding for the precognition</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> on <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: Submitted to Cornell University on 2021-03-31"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2003834744&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">structured tabular data,” in Proceedings of the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> IEEE/<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: Submitted to Cornell University on 2021-03-31"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2003834744&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">CVF Conference on Computer Vision and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Pattern Recog- <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: Submitted to Cornell University on 2021-03-31"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2003834744&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">nition</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Workshops, 2019, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: Submitted to Cornell University on 2021-03-31"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:1:2003834744&n=1&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#795AB9" class="#795AB9">pp. 0</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">–0. [18] <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 18 in source list: Submitted to University of Nottingham  on 2019-12-27"><a href="javascript:void(0);" onClick="window.open('/paperInfo.asp?r=45.0165138940996&svr=43&lang=zh_tw&oid=oid:2:614831702&n=2&perc=0', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc0066" class="#cc0066">S.-C. Wang, “Artificial neural network,” in Interdisciplinary computing in java pro- gramming. Springer, 2003, pp. 81</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">–100. 69 參考<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: https://arxiv.org/pdf/2008.13751.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=671029717&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">文獻 [19] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image recognition</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">,” in Proceedings of <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: https://arxiv.org/pdf/2008.13751.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=671029717&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">the IEEE conference on computer vision and pattern recognition, 2016, pp. 770–778. [20] O. Ronneberger, P. Fischer, and T. Brox, “U-net: Convolutional networks for biomedical image segmentation,” in International Conference on Medical image computing and computer</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">-assisted intervention. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: https://arxiv.org/pdf/2008.13751.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=671029717&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">Springer, 2015, pp. 234–241</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">. [21] P. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: https://arxiv.org/pdf/2008.13751.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=671029717&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">Kontschieder</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, M. Fiterau, A. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: https://arxiv.org/pdf/2008.13751.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=671029717&n=3796&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#D10A0A" class="#D10A0A">Criminisi</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: https://arxiv.org/pdf/1804.08348.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3291097266&n=3265&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> S. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: https://arxiv.org/pdf/1804.08348.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3291097266&n=3265&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">R. Bulo, “Deep neural decision forests,” in Proceedings of the IEEE international conference on computer vision, 2015, pp. 1467</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">–1475. [<img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: https://arxiv.org/pdf/1804.08348.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=3291097266&n=3265&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#287B28" class="#287B28">22</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">] <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 16 in source list: Haoran Luo, Fan Cheng, Heng Yu, Yuqi Yi. "SDTR: Soft Decision Tree Regressor for Tabular Data", IEEE Access, 2021"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=45.0165138940996&svr=43&lang=zh_tw&sid=707842398&n=37&svr=47&session-id=68502ad9b0e9434896c47a58d42b36a1', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#63009c" class="#63009c">Y. Yang, I. G. Morillo, and T. M. Hospedales, “Deep neural decision trees,” arXiv preprint arXiv:1806.06988</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">, 2018. </p>
+</div>
+</body>
+</html>

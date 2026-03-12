@@ -1,0 +1,94 @@
+\chapter{附錄:論文口試問題彙整}
+
+\begin{enumerate}
+	\item 為甚麼要進行檔位的預測，而不是直接收集騎乘時的檔位狀態，有要透過預測的結果對腳踏車介入控制嗎。
+	\begin{enumerate}[Ans.]
+		\item 我們在論文中提到會於騎乘時手動進行換檔並將檔位資訊進行記錄，主要是用於訓練資料的收集，使用這些資料對機器學習的方法進行訓練與PC端的測試，而我們最終的目的是希望可以透過騎乘時收集的感測器資訊用於即時的檔位判斷，並直接進行檔位的切換。
+	\end{enumerate}
+
+	\item 只考慮一個sample的前次檔位的資訊使否足夠，有沒有考慮過使用多個sample的前次檔位訊息
+	\begin{enumerate}[Ans.]
+		\item 只考慮一個sample的前次檔位訊息，確實可能會有資訊不足的情況，雖然我們的實驗中目前沒有太大的問題，不過這部分確實是我們可以改善的方向。圖\ref{XGB10step} 、圖\ref{CAT10step}使用10筆先前檔位訊息的測試結果，可以看到效果並不理想，整體結果比只使用前次檔位的效果差。這部分我們認為是因為檔位通常不會時常變動，所以往前看10比的檔位資訊在大部分的情況下都是相同的數值，所以類似於只讓前次檔位的訊息多了10倍，因此會讓整個模型更傾向於不產生變化，導致效果並不理想。
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Image/question/XGB_10step.png}
+	\caption{考慮前10個檔位的XGBoost}
+	\label{XGB10step}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Image/question/CAT_10step.png}
+	\caption{考慮前10個檔位的CATBoost}
+	\label{CAT10step}
+\end{figure}
+
+	\end{enumerate}
+
+	\item Score的物理意義是甚麼，是否考慮用score去訓練。
+	\begin{enumerate}[Ans.]
+		\item 我們的Score是透過準確度減去變動比率獲得的，因為我們不希望變動頻率高的預測結果會因為準確度高就得到高分，所以我們透過減去變動比率的方式對變動頻率高的結果進行抑制。使用我們設計的score作為訓練的指標確實有機會提升我們的預測結果，這部分我們會對各個架構自訂義評估指標的方法確認後進行嘗試。
+
+	\end{enumerate}
+
+	\item 為甚麼不使用RNN、LSTM等方法進行預測
+	\begin{enumerate}[Ans.]
+		\item 這部分是因為我們當初看的LSTM相關研究中較多是用於NLP的領域，比較少用於表格資料，所以最後沒有選擇LSTM相關的方法進行研究。
+	\end{enumerate}
+
+	\item 校內10000筆資料是騎多少圈的資料量，由幾個騎乘者進行採樣。
+	\begin{enumerate}[Ans.]
+		\item 校內資料因為每個路線的長度不同所以收集10,000筆所騎乘的圈數並不相同，不過大致上是6~9圈左右。並且所有資料都是同一個人騎乘時所收集的。另外我們的測試資料的騎乘路線並不包含再訓練資料的5條路線中，而測試路線與訓練路線的大部分路段是有重疊的。
+	\end{enumerate}
+	
+	\item 經緯度訊息是否有考慮方向性，當同一個地點去程與回程分別是上坡、下坡時如何處理。
+	\begin{enumerate}[Ans.]
+		\item 這部分我們有使用前次時間點的經緯度訊息一同進行考慮，使用前次的經緯度與當下的經緯度用於學習騎乘時的方向性，以解決同一個地點去程與回程分別是上坡、下坡的問題。
+	\end{enumerate}
+
+	\item 是否考慮只做升降檔的判斷就好
+	\begin{enumerate}[Ans.]
+		\item 讓騎乘者有較好的騎乘體驗的確是這個研究很大的一個目標，因此這種評估方式確實是需要執行的，但因為目前都是在PC端進行預測沒版法進行此種評估，往後移植到移動端後這部分會進行考量。
+	\end{enumerate}
+
+	\item 是否考慮將騎乘者的騎乘體驗納入測試時的考量依據
+	\begin{enumerate}[Ans.]
+		\item 讓騎乘者有較好的騎乘體驗的確是這個研究很大的一個目標，這個部分我們認為檔位的切換頻率如果過高，會使整個騎乘體驗並不順暢，因此我們有使用了兩階段訓練方法降低整體的檔位變換比率。另外人們騎乘時比較不會有一次切換大於一個檔位的狀況，因此我們有對資料做平滑調整來減少這種狀況發生。並且之後移植到移動端後評估的方式會加入騎乘者的騎乘感受做為參考。
+	\end{enumerate}
+
+
+	\item 只有使用壓力感測器的狀況下可以有好的預測結果嗎
+	\begin{enumerate}[Ans.]
+		\item 這部分在論文的4.2.1章有進行測試，結論而言是沒辦法的，原因我們認為是因為我們只有在一邊的腳踏板上安裝壓力感測器，會導致採樣資料時不一定是演感測器的那腳在出力，因此資訊方面可能不夠穩定。另外若兩邊都安裝了壓力感測器，也有可能因為踏板的位置不同出現不同的讀值，因此我們認為單靠壓力感測器並不能有效地進行預測。
+	\end{enumerate}
+
+	\item 實驗結果圖能包含不同神經網路的表現
+	\begin{enumerate}[Ans.]
+		\item 這部分我們會整理後加入論文中。圖\ref{multiresultOutside}、圖\ref{multiresultSchool}將幾種效果比較好的方法(CATBoost、LightGBM、XGBoost、RandomForests)整理成一張圖的結果，圖3是校外資料，圖4是校內資料，且所有的方法都是使用兩階段訓練產生結果。
+	\end{enumerate}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Image/question/multiresult_outside.png}
+	\caption{校外多種方法的預測結果}
+	\label{multiresultOutside}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Image/question/multiresult_school.png}
+	\caption{校內多種方法的預測結果}
+	\label{multiresultSchool}
+\end{figure}
+
+\item GPS是否能取得坡度資訊
+	\begin{enumerate}[Ans.]
+		\item 坡度資訊我們是透過IMU獲取的
+	\end{enumerate}
+\end{enumerate}
