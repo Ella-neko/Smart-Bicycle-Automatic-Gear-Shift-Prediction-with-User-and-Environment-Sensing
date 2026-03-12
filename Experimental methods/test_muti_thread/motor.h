@@ -1,0 +1,228 @@
+#include <Servo.h>
+
+Servo myservo; // 建立Servo物件，控制伺服馬達
+ int reset = 0;   //復位檢查
+ int start = 0;   //復位尋找角度起始點
+ int angle = 0;   //轉動到的角度
+ int RR = 0;     //現在檔位
+ int RR1 = 0;    //前次檔位
+ int last_state = 0;  //前次檔位馬達角度
+ int back = 0;//退檔紀錄
+ int gear_flag=1;
+void last_degree(){     //紀錄前次檔位馬達角度(RR1+1 = 實際第幾檔)
+  if(RR1==6){
+    last_state=180; 
+  }
+  if(RR1==5){
+    last_state=160; 
+  }
+  if(RR1==4){
+    last_state=120; 
+  }
+  if(RR1==3){
+    last_state=90; 
+  }
+  if(RR1==2){
+    last_state=70; 
+  }
+  if(RR1==1){
+    last_state=55; 
+  }
+  if(RR1==0){
+    last_state=0; 
+  }
+  //Serial.print("last_state = ");
+  //Serial.println(last_state);
+}
+void motorsetup() 
+{ 
+ // Serial.begin(9600);
+  myservo.attach(9); // 連接數位腳位9，伺服馬達的訊號線
+   if(start == 0){    //復位
+    for(angle = 180; angle >= 0; angle--){
+     myservo.write(angle); 
+     //Serial.println(angle);
+     delay(10);
+     if(angle==0){
+    reset = 1;
+    }
+   }
+   if(reset==1){
+    reset = 1;
+    Serial.println("已復位");
+   }
+ }
+  
+} 
+
+void motorloop(int d)                                   //d = 幾檔
+{
+  //myservo.attach(9);
+ if(reset==1){
+  //d = Serial.read();
+  if(d == 1){
+    last_degree();
+    //Serial.println("換檔囉!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    RR=0;
+    if(RR1>RR){
+   for(angle = last_state; angle >= 0; angle--){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(10);
+   }
+    } 
+     RR1=RR;
+  }
+
+
+  
+  if(d == 2){
+    last_degree();
+    //Serial.println("換檔囉!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    RR=1;
+    if(RR1>RR){
+   for(angle = 180; angle >= 45; angle--){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(10);
+   }
+    back = 1;
+    }
+    if(RR1<=RR){
+     if(back==1){
+        last_state-=10;
+        back = 0;
+      }
+    for(angle = last_state; angle <= 55; angle++){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(10);
+    }
+  }
+     RR1=RR;
+  }
+
+  
+ if(d == 3){
+  last_degree();
+ //Serial.println("換檔囉!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+     RR=2;
+     if(RR1>RR){
+       for(angle = 180; angle >= 60; angle--){
+     myservo.write(angle); 
+     //Serial.println(angle);
+     delay(10);
+   }
+    back = 1;
+    }
+    if(RR1<=RR){
+      if(back==1){
+        last_state-=10;
+        back = 0;
+      }
+    for(angle = last_state; angle < 70; angle++){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(10);
+       }
+     }
+       RR1=RR;
+     }
+
+     
+  if(d == 4){
+    last_degree();
+ // Serial.println("換檔囉!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+   RR=3;
+   if(RR1>RR){
+       for(angle = 180; angle >= 75; angle--){
+     myservo.write(angle); 
+     //Serial.println(angle);
+     delay(10);
+   }
+     back = 1;
+    }
+    if(RR1<=RR){
+    if(back==1){
+        last_state-=10;
+        back = 0;
+      }
+    for(angle = last_state; angle <= 90; angle++){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(10);
+         }
+        }
+        RR1=RR;
+     }
+
+        
+   if(d == 5){
+      last_degree();
+      //Serial.println("換檔囉!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+      RR=4;
+      if(RR1>RR){
+     for(angle = 180; angle >= 100; angle--){
+     myservo.write(angle); 
+     //Serial.println(angle);
+     delay(10);
+   }
+   back = 1;
+      }
+   if(RR1<=RR){
+     if(back==1){
+        last_state-=10;
+        back = 0;
+      }
+    for(angle = last_state; angle <= 120; angle++){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(50);
+   }
+  }
+  RR1=RR;
+ }
+  
+   if(d == 6){
+    last_degree();
+    //Serial.println("換檔囉!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    RR=5;
+   if(RR1>RR){
+     for(angle = 180; angle >= 120; angle--){
+     myservo.write(angle); 
+     //Serial.println(angle);
+     delay(10);
+   }
+   back = 1;
+  }
+   if(RR1<=RR){
+     if(back==1){
+        last_state-=10;
+        back = 0;
+      }
+    for(angle = last_state; angle <= 160; angle++){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(50);
+   }
+  }
+  RR1=RR;
+ }
+
+ 
+   if(d == 7){
+    last_degree();
+    //Serial.println("換檔囉!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    RR=6;
+   if(RR1<=RR){
+    for(angle = last_state; angle <= 180; angle++){
+     myservo.write(angle); 
+    // Serial.println(angle);
+     delay(400);
+   }
+  }
+  RR1=RR;
+ }
+ }
+}
+
