@@ -1,0 +1,2 @@
+原本檔名為noGear.png
+修該後變為school_pastgear.png
